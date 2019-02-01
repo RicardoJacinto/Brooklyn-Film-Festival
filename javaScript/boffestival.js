@@ -133,7 +133,7 @@ $(window).scroll(function(e){
     var addTranslateX = 0;
  
 
-if(($('#marathon-section').offset().top + ( $('#marathon-section').outerHeight(true))) != 478.313 && ($('#marathon-section').offset().top + ( $('#marathon-section').outerHeight(true))) != 503.313 && ($('#marathon-section').offset().top + ( $('#marathon-section').outerHeight(true))) != 675.313 ){
+if(($('#marathon-section').offset().top + ($('#marathon-section').outerHeight(true))) != $('#marathon-section').outerHeight(true) ){
 
 	if(scrollTop > ($('#marathon-section').offset().top + ( $('#marathon-section').outerHeight(true)) - 200) ){ 
 
