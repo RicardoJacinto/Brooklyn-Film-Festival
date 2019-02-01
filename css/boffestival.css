@@ -1301,6 +1301,13 @@ grid-column: 1/2;
 
   }
 
+  #placeholder{
+
+  height: 1000px;
+  width:100%;
+  background-color: #ededef;
+}
+
 
 }
 
