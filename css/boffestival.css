@@ -262,7 +262,7 @@ figcaption{
   padding: 10px;
   transition: all 0.5s ease-in-out ;
 
-  transform: translateX(-335px);
+  transform: translateX(-600px);
 }
 
   
@@ -949,7 +949,7 @@ body{
    }
 }
 
-@media all and (min-width:100px) and (max-width:1385px){
+@media all and (min-width:0px) and (max-width:1385px){
 
   .circle1, .circle3{
     display:  none;
@@ -982,8 +982,12 @@ body{
 
 
 
-@media all and (min-width:100px) and (max-width:768px){
+@media all and (min-width:0px) and (max-width:768px){
 
+#navbar{
+
+  font-size: 0.8em;
+}
 
 
 .brooklyn-man{
@@ -996,10 +1000,6 @@ body{
   display:none;
 }
 
-.main-header{
- 
-   height: 500px;
-}
 
 .logo{
 
