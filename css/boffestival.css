@@ -959,6 +959,11 @@ body{
 
 @media all and (min-width:768px) and (max-width:992px){
 
+
+.movie-window{
+
+   display: none;
+}
   
 
 .brooklyn-man{
@@ -983,6 +988,12 @@ body{
 
 
 @media all and (min-width:0px) and (max-width:768px){
+
+
+.movie-window{
+
+   display: none;
+}
 
 #navbar{
 
@@ -1300,13 +1311,6 @@ grid-column: 1/2;
   background-repeat: no-repeat;
 
   }
-
-  #placeholder{
-
-  height: 1000px;
-  width:100%;
-  background-color: #ededef;
-}
 
 
 }
