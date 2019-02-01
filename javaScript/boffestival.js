@@ -4,6 +4,7 @@ $(document).ready(function(){
 	$('.path').hide();
 	$('.article').hide();
 	$('#marathon-section').hide();
+	$('.movie-window').hide();
 	$('.movie-grid-text').hide();
 	$('#movie-grid-adults').hide();
 	$('#family-section').hide();
@@ -58,7 +59,7 @@ $('.picture').on("mouseleave", function(e){
 
 		$('figcaption').css({
 
-			transform: 'translateX(-335px)'
+			transform: 'translateX(-600px)'
 		})
 });
 
@@ -136,11 +137,7 @@ $(window).scroll(function(e){
 if(($('#marathon-section').offset().top + ($('#marathon-section').outerHeight(true))) != $('#marathon-section').outerHeight(true) ){
 
 	if(scrollTop > ($('#marathon-section').offset().top + ( $('#marathon-section').outerHeight(true)) - 200) ){ 
-
-		console.log('Marathon-section: ' + ($('#marathon-section').offset().top + ( $('#marathon-section').outerHeight(true))));
-    
-       console.log( scrollTop > ($('#marathon-section').offset().top + ( $('#marathon-section').outerHeight(true))));
-
+	
 
 			circleList.forEach(function(circle){
             
@@ -156,7 +153,6 @@ if(($('#marathon-section').offset().top + ($('#marathon-section').outerHeight(tr
 			
 		});
 	 }
-
 
 }
 
