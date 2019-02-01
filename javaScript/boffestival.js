@@ -69,8 +69,9 @@ $(window).scroll(function(e){
 	let scrollTop = $(this).scrollTop();
 
 
-    if(scrollTop >= $('#intro-text').offset().top-100){ 
+    if(scrollTop >= $('.main-header').offset().top + $('.main-header').outerHeight(true)){ 
         
+
           $('#navbar').addClass('sticky');
 
     }else{
@@ -93,13 +94,13 @@ $(window).scroll(function(e){
 	var pictureList = document.querySelectorAll(".picture");
     var iteration = 0;
 
-	if(scrollTop > $('#intro-text').offset().top-700){ 
+	if(scrollTop > $('.main-header').offset().top + ($('.main-header').outerHeight(true)-200) ){ 
 
 		$('.article').fadeIn(1000);
 
 	}
 
-	if(scrollTop > $('#intro-text').offset().top){ 	 
+	if(scrollTop > $('#intro-text').offset().top + ( $('#intro-text').outerHeight(true)-200) ){ 	 
 
 
 		pictureList.forEach(function(pic){
@@ -119,21 +120,27 @@ $(window).scroll(function(e){
 	var maratonList = document.querySelectorAll(".mara-square");
     
 
-	if(scrollTop > $('.gallery-intro').offset().top+500){ 
+	if(scrollTop > $('.gallery-intro').offset().top + ( $('.gallery-intro').outerHeight(true)-200) ){ 
 
 		$('#marathon-section').fadeIn(1000);
- 				
+ 		
 		elevateSquares(maratonList);
+
 	}
-
-
 
 	var circleList = document.querySelectorAll(".circle");
     var iterateCircle = 0;
     var addTranslateX = 0;
  
 
-	if(scrollTop > $('.gallery-intro').offset().top+1000){ 
+if(($('#marathon-section').offset().top + ( $('#marathon-section').outerHeight(true))) != 478.313 && ($('#marathon-section').offset().top + ( $('#marathon-section').outerHeight(true))) != 503.313 && ($('#marathon-section').offset().top + ( $('#marathon-section').outerHeight(true))) != 675.313 ){
+
+	if(scrollTop > ($('#marathon-section').offset().top + ( $('#marathon-section').outerHeight(true)) - 200) ){ 
+
+		console.log('Marathon-section: ' + ($('#marathon-section').offset().top + ( $('#marathon-section').outerHeight(true))));
+    
+       console.log( scrollTop > ($('#marathon-section').offset().top + ( $('#marathon-section').outerHeight(true))));
+
 
 			circleList.forEach(function(circle){
             
@@ -149,18 +156,21 @@ $(window).scroll(function(e){
 			
 		});
 	 }
-    if($('.movie-window').offset().top != 0)
-	 	if(scrollTop > $('.movie-window').offset().top){ 
+
+
+}
+
+	 	if(scrollTop >  $('.movie-window').offset().top){ 
 
 		$('.movie-grid-text').fadeIn(1000);
 
       
 	}
 
-	if($('.movie-window').offset().top!= 0){
 
+	 	if(scrollTop > ($('.movie-window').offset().top + ( $('.movie-window').outerHeight(true))-200) ){ 
 
-	 	if(scrollTop > $('.movie-window').offset().top+200){ 
+	 			console.log( ($('.movie-window').offset().top + ( $('.movie-window').outerHeight(true))) )
 
 	 		var offset = Math.min(0, (scrollTop - $('.movie-window').offset().top-900));
 
@@ -241,7 +251,7 @@ $(window).scroll(function(e){
 	   });
       
 	 } 
-  } 
+ 
 
   if($('#movie7').offset().top != 0){
 
