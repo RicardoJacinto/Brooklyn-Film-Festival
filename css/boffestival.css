@@ -160,8 +160,8 @@ hr{
 
 .gallery-intro{
   
-  height:1200px;
-  
+  height: 900px;
+
   display: grid;
   grid-gap:5px;
   grid-template-columns: repeat(auto-fill, minmax(388.75px, 1fr));
@@ -294,7 +294,7 @@ margin-bottom: 50px;
 } */
 
 .article2{
-
+ 
   margin-top: 50px;
 margin-bottom: 50px;
 
@@ -934,16 +934,20 @@ body{
   font-size: 0.1em !important;
 }
 
-.brooklyn-man{
- 
-  display:none;
-}
-
 .gallery-intro{
 
     
   }
 } */
+
+@media all and (min-width:992px) and (max-width:1464px){
+
+
+ .gallery-intro{
+
+    height: 1200px;
+   }
+}
 
 @media all and (min-width:100px) and (max-width:1385px){
 
@@ -955,12 +959,12 @@ body{
 
 @media all and (min-width:768px) and (max-width:992px){
 
-  body{ 
-        
-        font-size: 0.9em !important;
-   }
+  
 
+.brooklyn-man{
 
+  display:none;
+}
 
    .gallery-intro{
 
@@ -980,11 +984,6 @@ body{
 
 @media all and (min-width:100px) and (max-width:768px){
 
-body{
-
-  font-size: 0.8em !important;
-
-}
 
 
 .brooklyn-man{
@@ -1072,13 +1071,11 @@ justify-content: center;
   grid-column: 1/2;
   grid-row: 1/2;
 
-  background-image: url("https://i.imgur.com/7rbuGYt.jpg");
 
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
 
-   transform: translateX(-600px);
 
 }
 
@@ -1088,13 +1085,12 @@ justify-content: center;
   grid-column: 1/2;
   grid-row: 2/3;
 
-    background-image: url("https://i.imgur.com/SG98mBL.jpg");
 
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
 
-  transform: translateY(600px);
+
 }
 
 
@@ -1103,13 +1099,12 @@ justify-content: center;
   grid-column: 1/2;
   grid-row: 3/4;
 
-    background-image: url("https://i.imgur.com/dPpZ3VT.jpg");
 
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
 
- transform: translateX(-1000px);
+
 
 
 }
@@ -1119,13 +1114,11 @@ justify-content: center;
 grid-column: 1/2;
   grid-row: 4/5;
 
-    background-image: url("https://i.imgur.com/TDj3ET4.jpg");
 
   background-size: cover;
   background-position: center 10%;
   background-repeat: no-repeat;
 
-transform: translateX(900px);
 }
 
 .movie-location:nth-child(5){
@@ -1134,13 +1127,10 @@ transform: translateX(900px);
   grid-row: 5/6;
 
 
-   background-image: url("https://i.imgur.com/jZV5rVP.jpg");
-
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
 
- transform: translateX(900px);
 
 }
 
@@ -1149,13 +1139,11 @@ transform: translateX(900px);
    grid-column: 1/2;
   grid-row: 6/7;
   
-background-image: url("https://i.imgur.com/4seJfTQ.jpg");
 
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
 
- transform: translateX(900px);
 }
 
 .movie-location:nth-child(7){
@@ -1163,13 +1151,10 @@ background-image: url("https://i.imgur.com/4seJfTQ.jpg");
    grid-column: 1/2;
   grid-row: 7/8;
   
-background-image: url("https://i.imgur.com/gKa2Kd0.jpg");
 
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
-
-  transform: translateX(600px);
 
 }
 
@@ -1179,13 +1164,11 @@ background-image: url("https://i.imgur.com/gKa2Kd0.jpg");
   grid-column: 1/2;
   grid-row: 8/9;
   
-background-image: url("https://i.imgur.com/6zbMOSZ.jpg");
 
   background-size: cover;
   background-position: bottom center;
   background-repeat: no-repeat;
 
-transform: translateX(800px);
 }
 
 .movie-location:nth-child(9){
@@ -1194,13 +1177,10 @@ transform: translateX(800px);
   grid-row: 9/10;
 
 
-  background-image: url(" https://i.imgur.com/DLvPSZy.jpg");
-
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
 
-   transform: translateY(600px);
 
 }
    .movie-location-kids:nth-child(1){
@@ -1208,13 +1188,11 @@ transform: translateX(800px);
   grid-column: 1/2;
   grid-row: 1/2;
 
-  background-image: url("https://i.imgur.com/uiEcUm0.jpg");
 
   background-size: cover;
   background-position: center 1%;
   background-repeat: no-repeat;
 
- transform: translateX(-600px);
 
 }
 
@@ -1224,13 +1202,10 @@ transform: translateX(800px);
    grid-column: 1/2;
   grid-row: 2/3;
 
-    background-image: url("https://i.imgur.com/mOVg9IR.jpg");
 
   background-size: cover;
   background-position: center 90%;
   background-repeat: no-repeat;
-
-transform: translateX(600px);
 
 }
 
@@ -1240,13 +1215,11 @@ transform: translateX(600px);
    grid-column: 1/2;
   grid-row: 3/4;
 
-    background-image: url("https://i.imgur.com/YGVPKY3.jpg");
 
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
 
-transform: translateX(-600px);
 
 }
 
@@ -1255,13 +1228,11 @@ transform: translateX(-600px);
     grid-column: 1/2;
   grid-row: 4/5;
 
-    background-image: url("https://i.imgur.com/T1s8EuC.jpg");
 
   background-size: cover;
   background-position: center 50%;
   background-repeat: no-repeat;
 
-  transform: translateY(600px);
 
 
 }
@@ -1272,13 +1243,10 @@ transform: translateX(-600px);
   grid-row: 5/6;
 
 
-   background-image: url("https://i.imgur.com/4IqCixu.jpg");
-
   background-size: 370px 100%;
   background-position: center center;
   background-repeat: no-repeat;
  
- transform: translateX(-800px);
 
 }
 
@@ -1286,14 +1254,12 @@ transform: translateX(-600px);
 
       grid-column: 1/2;
   grid-row: 6/7;
-  
-background-image: url("https://i.imgur.com/QgcKLqo.jpg");
+
 
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
 
-  transform: translateX(800px);
 
 }
 
@@ -1302,13 +1268,11 @@ background-image: url("https://i.imgur.com/QgcKLqo.jpg");
       grid-column: 1/2;
   grid-row: 7/8;
   
-background-image: url("https://i.imgur.com/3KDQDpA.jpg");
 
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
 
-transform: translateY(600px);
 }
 
 
@@ -1317,13 +1281,11 @@ transform: translateY(600px);
      grid-column: 1/2;
   grid-row: 8/9;
   
-background-image: url("https://i.imgur.com/Zi5gAQe.jpg");
 
   background-size: cover;
   background-position: bottom bottom;
   background-repeat: no-repeat;
 
-  transform: translateX(800px);
 
 }
 
@@ -1332,8 +1294,6 @@ background-image: url("https://i.imgur.com/Zi5gAQe.jpg");
   grid-column: 1/2;
   grid-row: 9/10;
 
-
-  background-image: url("https://i.imgur.com/iAjDW2b.jpg");
 
   background-size: cover;
   background-position: top center;
