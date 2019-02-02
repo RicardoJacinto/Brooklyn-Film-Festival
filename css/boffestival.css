@@ -173,7 +173,7 @@ hr{
 
   display: grid;
   grid-gap:5px;
-  grid-template-columns: repeat(auto-fill, minmax(388.75px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   grid-template-rows: repeat(auto-fill, 300px);
 }
 
@@ -956,7 +956,7 @@ background-image: url("https://i.imgur.com/Zi5gAQe.jpg");
 
 @media all and (min-width:768px) and (max-width:992px){
 
-  
+
 .brooklyn-man{
 
   display:none;
@@ -980,15 +980,10 @@ background-image: url("https://i.imgur.com/Zi5gAQe.jpg");
 
 @media all and (min-width:0px) and (max-width:768px){
 
-#navbar{
+ body{
 
   font-size: 0.8em !important;
-}
-
-body{
-
-  font-size: 0.9em !important;
-}
+ }
 
 
 
@@ -1006,6 +1001,7 @@ body{
 .logo{
 
   margin-top: 5px;
+  margin-left: 50px;
 }
 
    .gallery-intro{
