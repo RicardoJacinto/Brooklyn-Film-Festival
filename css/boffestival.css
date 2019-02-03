@@ -11,11 +11,18 @@ body{
   background-color: #ededef;
 }
 
+.container-fluid{
+
+  padding:0px 0px !important;
+}
+
 
 #container-main{
 
   width: 100% !important;
-  margin: 0px 0px;
+  margin: 0px 0px !important;
+  padding: 0px 0px !important;
+
   overflow: hidden;
 }
 
@@ -23,6 +30,8 @@ a{
 font-style: none;
 text-decoration:none;
 color: white;
+
+
 }
 
 h1, h2{
@@ -45,7 +54,6 @@ hr{
 /* .main-header has position relative in order to anchor the absolute elements within */
 .main-header{
   
-  position: relative;
   height: 800px;
   background-image: url("https://i.imgur.com/UDsn8R2.jpg");
   background-size: cover;
@@ -56,11 +64,14 @@ hr{
 
 /* #navbar section */
 #navbar{
-   
+
+  
+  width: 100% !important;
 
   height:100px;
   color: white;
-
+  
+ 
   font-size: 1em;
   font-family: "Alegreya Sans SC";
 
@@ -80,8 +91,11 @@ hr{
 }
 
 /* add class sticky to #navbar when reaching a certain point on the page so it stays fixed at top of the page*/
-/*.sticky{
+.sticky{
+
   position: fixed;
+
+  
   width: 100% !important;
   height:50px !important;
   top:0;
@@ -90,8 +104,7 @@ hr{
   z-index:100;
 
   transition: all 0.3s  ease-in-out;
-} 
-*/
+}
 
 .logo{
 
@@ -112,9 +125,20 @@ hr{
  }
 
 /* .path(n) referes to the classes addresing the #svg-logo. This will style the different layers of the svg with a white fill  */
-.path, .path1, .path2, .path4{
-    fill: #FFFFFF !important;
+.path, .path1, .path2{
+    fill: #FFFFFF;
 }
+
+
+  #logo-svg1  path{
+
+        fill: rgb(211, 6, 6);
+   }
+
+   #logo-svg1 .path4{
+
+      fill: rgb(142, 7, 7) !important;
+   }
 
 /* .path1 refers to the little underscore in the logo. This class has an underscore animation that makes the underscore blink in an infinite loop   */
 
@@ -165,6 +189,7 @@ hr{
 
 .article p{
   margin: 50px auto;
+  padding: 0 15px;
 }
 
 .gallery-intro{
@@ -666,7 +691,7 @@ overflow:hidden;
   height: 850px;
 
   position: absolute;
-  top: 1250px;
+  top: 1200px;
 
 
   background-image: url("https://i.imgur.com/Gdfj8Le.png");
@@ -688,7 +713,7 @@ overflow:hidden;
   left: 38%;
   top:50%;
   margin-top: -100px;
-  margin-left: -100px;
+  margin-left: -150px;
 
 
   z-index:20;
@@ -768,31 +793,43 @@ background: linear-gradient(45deg, #FF64EA 0%, #B447A5 55%, #86357B 100%);
 }
 
 #footer{
-
+  
   background-color: black;
 
    color: white;
-   width: 100%;
-}
 
-.footer-material{
+    font-family: "Alegreya Sans SC";
 
-  display: grid;
- 
-  list-style: none;
- 
-  grid-template: repeat(1, 250px)/ repeat(3, 1fr);
-
-  align-items: center;
+    padding: 50px 50px;
+    padding-bottom: 10px;
 
 }
 
-#footer > div{
 
-  width:50%;
+.center-footer{
 
-  margin: auto auto;
+  margin:0 auto;
+  width: 60%;
 }
+
+#author{
+
+  margin: 50px auto;
+  margin-bottom: 0px
+  
+}
+
+#author > p{
+
+  text-align: center;
+  font-size: 0.7em;
+}
+
+i.fab{
+
+    padding-left: 5px;
+}
+
 
 
 .color{
@@ -927,7 +964,7 @@ background-image: url("https://i.imgur.com/Zi5gAQe.jpg");
 
 #placeholder{
 
-  height: 300px;
+  height: 200px;
   width:100%;
   background-color: #ededef;
 }
@@ -937,7 +974,7 @@ background-image: url("https://i.imgur.com/Zi5gAQe.jpg");
 
 
 
-@media all and (min-width:992px) and (max-width:1464px){
+@media all and (min-width:874px) and (max-width:1464px){
 
 
  .gallery-intro{
@@ -954,7 +991,7 @@ background-image: url("https://i.imgur.com/Zi5gAQe.jpg");
 }
 
 
-@media all and (min-width:768px) and (max-width:992px){
+@media all and (min-width:768px) and (max-width:874px){
 
 
 .brooklyn-man{
@@ -962,15 +999,15 @@ background-image: url("https://i.imgur.com/Zi5gAQe.jpg");
   display:none;
 }
 
+#leo{
+
+  display:none;
+}
    .gallery-intro{
 
     height: 2400px;
    }
 
-   #leo{
-
-      top:1400px;
-   }
 
   
 }
@@ -982,10 +1019,21 @@ background-image: url("https://i.imgur.com/Zi5gAQe.jpg");
 
  body{
 
-  font-size: 0.8em !important;
+  font-size: 0.9em !important;
+
+ }
+
+ #navbar{
+
+  font-size:0.85em !important;
  }
 
 
+
+.main-header{
+  
+   height: 500px;
+}
 
 .brooklyn-man{
 
@@ -1000,8 +1048,8 @@ background-image: url("https://i.imgur.com/Zi5gAQe.jpg");
 
 .logo{
 
-  margin-top: 5px;
-  margin-left: 50px;
+  margin-top: 40px !important;
+  margin: auto auto;
 }
 
    .gallery-intro{
