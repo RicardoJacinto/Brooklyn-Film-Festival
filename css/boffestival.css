@@ -11,7 +11,10 @@ body{
   background-color: #ededef;
 }
 
+.container-fluid{
 
+  padding: 0 5px !important;
+}
 
 #container-main{
 
@@ -91,7 +94,7 @@ hr{
 
   position: fixed;
 
-  padding-left: -15px;
+  margin-left: -5px !important; 
   width: 100% !important;
   height:50px !important;
   top:0;
@@ -133,7 +136,9 @@ hr{
 
    #logo-svg1 .path4{
 
-      fill: rgb(142, 7, 7) !important;
+      fill: rgb(255, 191, 255) !important;
+      stroke: rgb(61, 60, 60);
+      stroke-width: 1px;
    }
 
 /* .path1 refers to the little underscore in the logo. This class has an underscore animation that makes the underscore blink in an infinite loop   */
@@ -185,7 +190,6 @@ hr{
 
 .article p{
   margin: 50px auto;
-
 }
 
 .gallery-intro{
