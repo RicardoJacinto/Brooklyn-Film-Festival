@@ -119,8 +119,8 @@ hr{
      position: relative;
      top: 50%;
      margin-top: -144px;
-     left: 62%;
-     margin-left: -250px;
+     left: 60%;
+     margin-left: -220px;
  }
 
 /* .path(n) referes to the classes addresing the #svg-logo. This will style the different layers of the svg with a white fill  */
