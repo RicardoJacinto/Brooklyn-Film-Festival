@@ -11,10 +11,6 @@ body{
   background-color: #ededef;
 }
 
-.container-fluid{
-
-  padding:0px 0px !important;
-}
 
 
 #container-main{
@@ -95,7 +91,7 @@ hr{
 
   position: fixed;
 
-  
+  padding-left: -15px;
   width: 100% !important;
   height:50px !important;
   top:0;
