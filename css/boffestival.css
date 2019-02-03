@@ -115,7 +115,7 @@ hr{
 /* I set the position of #svg-logo to relative in order to move element around relative to it's parent div (.logo)*/
 .logo #svg-logo{
 
-     width: 90%;
+     width: 80%;
      position: relative;
      top: 50%;
      margin-top: -144px;
@@ -709,7 +709,7 @@ overflow:hidden;
   fill: #FFF;
 
   position: absolute;
-  width:90%;
+  width:80%;
   left: 40%;
   top:50%;
   margin-top: -100px;
@@ -1025,7 +1025,7 @@ background-image: url("https://i.imgur.com/Zi5gAQe.jpg");
 
  #navbar{
 
-  font-size:0.85em !important;
+  font-size:0.8em !important;
  }
 
 
