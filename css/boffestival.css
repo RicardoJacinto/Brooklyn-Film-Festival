@@ -53,6 +53,7 @@ hr{
 /* .main-header has position relative in order to anchor the absolute elements within */
 .main-header{
   
+  position: relative;
   height: 800px;
   background-image: url("https://i.imgur.com/UDsn8R2.jpg");
   background-size: cover;
@@ -62,6 +63,43 @@ hr{
 }
 
 /* #navbar section */
+
+#mobile-nav{
+    
+   
+   width: 95%;
+   position: absolute;
+
+  z-index: 1000;
+  display:none;
+
+}
+
+.fa-bars{
+
+    font-size: 30px;
+    color: white;
+    
+    margin: 10px 10px ;
+    float:right;
+    display: block;
+
+}
+
+#container-mobile{
+
+  float: right;
+  display: none;
+
+  font-size:0.9em;
+
+  font-family: "Alegreya Sans SC";
+
+
+
+
+}
+
 #navbar{
 
   
@@ -70,8 +108,8 @@ hr{
   height:100px;
   color: white;
   
- 
-  font-size: 1em;
+  
+  font-size: 0.7em;
   font-family: "Alegreya Sans SC";
 
   display: flex;
@@ -975,6 +1013,65 @@ background-image: url("https://i.imgur.com/Zi5gAQe.jpg");
   background-color: #ededef;
 }
 
+#reserve-title{
+
+  text-align: center;
+  color: white;
+}
+
+
+#form-reserve > p{
+     
+  
+     margin: 0px auto;
+     color:white;
+     width:90%;
+     }
+
+#span-side > p{
+  
+  font-size: 0.8em;
+  margin: 25px auto;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+#form-table{
+
+  display: grid;
+
+  grid-template-columns: 2fr 2fr;
+
+}
+
+
+#password, #username, #submit, #ticket-number, #emailAddress{
+  
+   border-radius:20px;
+   border-width: 3px;
+   background:none;
+   border-color: rgb(255,255,255);
+   border-style: solid;
+   color: white;
+}
+ 
+ ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: white;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: white;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: white;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: white;
+}
 
 /* Media Queries ----------------------------------------------------------------------------------------------------------------------------------------------------- */
 
@@ -1029,10 +1126,13 @@ background-image: url("https://i.imgur.com/Zi5gAQe.jpg");
 
  }
 
+ #mobile-nav{
+  display: block;
+ }
+
  #navbar{
 
-  font-size:0.8em !important;
-  padding-right: 10px;
+  display:none;
  }
 
  #svg-logo{
@@ -1091,7 +1191,7 @@ background-image: url("https://i.imgur.com/Zi5gAQe.jpg");
                         "c";
 
 
-grid-template-columns: repeat(1, 300px);
+grid-template-columns: repeat(1, 315px);
 grid-template-rows: 300px 100px 350px;
     }
 
@@ -1376,6 +1476,8 @@ grid-column: 1/2;
 
    font-size: 2.6em;
 }
+
+
 
 
 
