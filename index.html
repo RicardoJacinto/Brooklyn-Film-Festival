@@ -25,10 +25,26 @@
                         <div class="navbar-items"> <a href="#marathon-section"> <strong> Movie Marathons </strong> </a> </div> 
                         <div class="navbar-items"> <a href="#movie-selection"> <strong> Movie Selection </strong> </a></div>
                         <div class="navbar-items"> <a href="#family-section"> <strong> Family Content </strong> </a> </div>
+                        <div class="navbar-items"> <a href="#sub-section"> <strong> Reservation </strong> </a> </div>
+                  </div>
+
+                  <div id = "mobile-nav">
+                     
+                     <i class="fas fa-bars"></i>
+                     
+                      <div id ="container-mobile"> 
+                        
+                          <p class="navbarM-items"> <a href="#intro-text"> <strong> Who are we </strong></a> </li>
+                          <p class="navbarM-items"> <a href="#marathon-section"> <strong> Movie Marathons </strong></a> </li>
+                          <p class="navbarM-items"> <a href="#movie-selection"> <strong> Movie Selection </strong></a> </li>
+                          <p class="navbarM-items"> <a href="#family-section"> <strong> Family Content </strong></a> </li>
+                          <p class="navbarM-items"> <a href="#sub-section"> <strong> Reservation </strong></a> </li>
+
+                      </div>
                   </div>
                 
                 <!-- Link svg #logo-svg -->        
-                <div class="logo col-xs-6 col-sm-6 col-md-6 col-lg-6"> 
+                <div class="logo col-xs-6 col-sm-12 col-md-6 col-lg-6"> 
                         <svg id="svg-logo" viewBox="0 0 619.9 278.1">
                             <use xlink:href="#logo-svg"></use>
                          </svg>
@@ -228,18 +244,61 @@
   <div id="sub-section" class ="article2 center">
 
     <div class="title-section"> 
-          <h3> Reserve now! 5000 spots left </h3> 
+          <h3> Book now! 5000 spots left </h3> 
     </div>
 
     <div class="top-section">
-       <div class="mara-square3"> 2 </div>
+       <div class="mara-square3"> <span id="ticket-cap"> 0 </span> </div>
        <div class="mara-square3"> GO! </div> 
-       <div class="mara-square3"> 5000</div> 
+       <div class="mara-square3"> <span id = "subtract-ticket"> 5000 </span></div> 
     </div>
 
     <div class="content-section">
+      <h3 id="reserve-title"> 5 tickets max per person </h3>
       
-      <p> On the first day of the event <strong> (5th of August) </strong> be ready to travel back in time and watch epic movie marathons like James Bond and Lord of the Rings. Mus mauris vitae ultricies leo integer malesuada nunc. Urna nec tincidunt praesent semper feugiat nibh sed. Risus feugiat in ante metus.</p>
+<div id="form-table">
+
+   <div id="form-side">
+       <form id = "form-reserve"> 
+       <p>
+      <label for="username">Username</label> 
+      <input type="text" name="username" id="username" required>
+     
+    </p>
+    <p>
+      <label for="password">Password</label> 
+      <input type="password" name="password" id="password" required>
+      
+    </p>
+    <p>
+      <label for="emailAddress">Email address</label> 
+      <input type="email" name="emailAddress" id="emailAddress" required placeholder="user@gmail.com">
+     
+    </p>
+    <p>  <label for="ticket-number">Number Tickets </label> 
+        <input type ="number" id="ticket-number" value=0>
+    </p>
+
+     <p>
+      <input id="submit" type="submit" value="Submit" disabled="true">
+     </p>
+
+    </form>
+
+  </div>
+   <div id="span-side">
+
+        <p> 3 to 12 Char: <span id="userNameHelp"></span> </p>
+        <p> 6 to 12 Char:  <span id="passwordHelp"> </span> </p>
+        <p> Email Status: <span id="emailHelp"></span> </p>
+        <p> 1 to 5 tickets: <span id="ticketsHelp"></span> </p> 
+
+   </div>
+
+
+</div>
+
+ 
     </div>
 
    </div>
