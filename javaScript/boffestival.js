@@ -13,7 +13,172 @@ $(document).ready(function(){
 	$('#latest-news').hide();
 	$('#sub-section').hide();
 	$('#footer').hide();
+
+
+	$('.navbar-items, .navbarM-items').on('click', function(){
+
+	$('.path').show();
+	$('#intro-text').show();
+	$('#marathon-section').show();
+	$('#movie-selection').show();
+	$('#movie-grid-adults').show();
+	$('#family-section').show();
+	$('#movie-grid-children').show();
+	$('#window-movie-selection').show();
+	$('#latest-news').show();
+	$('#sub-section').show();
+	$('#footer').show();
+
+
+	});
+
+	$(".fa-bars").on("click", function(e){
+  
+     $("#container-mobile").slideToggle();
+
+     });
+
+
+
+
+    		var ticketNumber = document.querySelector('#ticket-number');
+    		var ticketCap = document.querySelector('#ticket-cap');
+    		var subtractTicket = document.querySelector('#subtract-ticket');
+
+    		var ticketsHelp = document.querySelector('#ticketsHelp');
+
+    		var correctColor = "#a0ff77";
+ 			var incorrectColor = "red";
+    		
+
+    		ticketNumber.addEventListener("input" , function(e){
+   
+  				if( (e.target.value > 5) || (e.target.value <= 0)){
+   
+                   
+    				submit.setAttribute("disabled", "true");
+    		         ticketsHelp.textContent = "Invalid"
+    		         ticketsHelp.style.color = incorrectColor;
+
+   				}else{
+
+   					 ticketsHelp.textContent = "Valid"
+   					 ticketCap.textContent = Number(e.target.value);
+     				subtractTicket.textContent = 5000 - Number(e.target.value);
+     				   ticketsHelp.style.color = correctColor;
+
+   					  if( messageFocus.textContent === "Valid" && passwordHelp.textContent ==="Valid" && emailHelp.textContent ==="Valid" &&  ticketsHelp.textContent === "Valid" ){
+     				
+     				 submit.removeAttribute("disabled");
+
+
+                  }
+   				}
+  			
+});
+   var username	= document.querySelector('#username');
+   
+   var messageFocus = document.querySelector('#userNameHelp');
+
+  username.addEventListener('input', function(e){
+             
+    console.log(Number(e.target.value.length))
+
+  	 if( Number(e.target.value.length) >= 3 && Number(e.target.value.length) <= 12 ){
+          
+         messageFocus.textContent = "Valid";
+
+         if( messageFocus.textContent === "Valid" && passwordHelp.textContent ==="Valid" && emailHelp.textContent ==="Valid" && ticketsHelp.textContent === "Valid"){
+
+         	  submit.removeAttribute("disabled"); 
+         }
+         messageFocus.style.color = correctColor;  
+        
+
+  	 }else{
+
+  		messageFocus.textContent = "Invalid";
+  		 messageFocus.style.color = incorrectColor;
+  		submit.setAttribute("disabled", "true");
+
+  	}
+
+  });
      
+
+ var getUser = document.querySelector("#username");
+
+var pass = document.getElementById("password");
+
+
+pass.addEventListener("input", function(e){
+ 
+ var password = e.target.value;
+ 
+
+
+ if(password.length >= 6 && password.length <=12){
+
+ 	passwordHelp.textContent = "Valid";
+ 	passwordHelp.style.color = correctColor;
+ 	if( messageFocus.textContent === "Valid" && passwordHelp.textContent ==="Valid" && emailHelp.textContent ==="Valid" && ticketsHelp.textContent === "Valid"){
+
+         	  submit.removeAttribute("disabled"); 
+         }
+ }else{
+  
+  passwordHelp.textContent = "Invalid";
+  passwordHelp.style.color = incorrectColor;
+  submit.setAttribute("disabled", "true");
+
+ }
+
+});
+
+// Checking an email address once it's entered
+
+var email = document.getElementById("emailAddress");
+
+email.addEventListener("blur", function (e) {
+   var emailRegex = /.+@.+\..+/;
+  
+    if (!emailRegex.test(e.target.value)) {
+
+    	emailHelp.textContent = "Invalid";
+ 	    emailHelp.style.color = incorrectColor;
+
+         submit.setAttribute('disabled','true');
+    }else{
+
+    	emailHelp.textContent = "Valid";
+ 	    emailHelp.style.color = correctColor;
+       if( messageFocus.textContent === "Valid" && passwordHelp.textContent ==="Valid" && emailHelp.textContent ==="Valid" && ticketsHelp.textContent === "Valid"){
+
+         	  submit.removeAttribute("disabled"); 
+         }
+    }
+});
+
+
+
+var submit = document.querySelector("#submit");
+
+submit.addEventListener('click', function(e){
+ 
+ e.preventDefault();
+ pass.value = "";
+ username.value="";
+ email.value="";
+ ticketNumber.value = 0;
+ subtractTicket.textContent = 5000;
+ ticketCap.textContent = "0";
+ emailHelp.textContent="";
+ passwordHelp.textContent="";
+ messageFocus.textContent="";
+ ticketsHelp.textContent="";
+
+
+})
 
 
 	var navbarList = document.querySelectorAll(".navbar-items");
