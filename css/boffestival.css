@@ -109,7 +109,7 @@ hr{
   color: white;
   
   
-  font-size: 0.7em;
+  font-size: 0.8em;
   font-family: "Alegreya Sans SC";
 
   display: flex;
@@ -597,7 +597,7 @@ transform: translateX(-1500px);
   background-image: url("https://i.imgur.com/7rbuGYt.jpg");
 
   background-size: cover;
-  background-position: center center;
+  background-position: center top;
   background-repeat: no-repeat;
 
    transform: translateX(-600px);
@@ -687,7 +687,7 @@ background-image: url("https://i.imgur.com/gKa2Kd0.jpg");
 
 .movie-location:nth-child(8){
   
-background-image: url("https://i.imgur.com/6zbMOSZ.jpg");
+background-image: url("https://i.imgur.com/0WCQ4kh.jpg");
 
   background-size: cover;
   background-position: bottom center;
@@ -890,7 +890,7 @@ i.fab{
   background-image: url("https://i.imgur.com/uiEcUm0.jpg");
 
   background-size: cover;
-  background-position: center center;
+  background-position: center top;
   background-repeat: no-repeat;
 
  transform: translateX(-600px);
@@ -902,10 +902,10 @@ i.fab{
 
   grid-column: 3/4;
 
-    background-image: url("https://i.imgur.com/mOVg9IR.jpg");
+    background-image: url("https://i.imgur.com/oYIQhdt.jpg");
 
   background-size: cover;
-  background-position: center center;
+  background-position: center 20%;
   background-repeat: no-repeat;
 
 transform: translateX(600px);
@@ -918,7 +918,7 @@ transform: translateX(600px);
   grid-column: 2/4;
   grid-row: 3/4;
 
-    background-image: url("https://i.imgur.com/YGVPKY3.jpg");
+    background-image: url("https://i.imgur.com/93z3eoj.jpg");
 
   background-size: cover;
   background-position: top center;
@@ -982,7 +982,7 @@ transform: translateY(600px);
 
 .movie-location-kids:nth-child(8){
   
-background-image: url("https://i.imgur.com/Zi5gAQe.jpg");
+background-image: url("https://i.imgur.com/QmZh6ZT.jpg");
 
   background-size: cover;
   background-position: bottom bottom;
@@ -1130,7 +1130,7 @@ button:focus {
   display: block;
  }
 
- #navbar{
+ #navbar, .brooklyn-man, #leo{
 
   display:none;
  }
@@ -1150,16 +1150,6 @@ button:focus {
 .main-header{
   
    height: 500px;
-}
-
-.brooklyn-man{
-
-  display:none;
-}
-
-#leo{
-
-  display:none;
 }
 
 
@@ -1237,7 +1227,6 @@ justify-content: center;
 
   background-size: cover;
   background-position: center center;
-  background-repeat: no-repeat;
 
 
 }
@@ -1250,8 +1239,7 @@ justify-content: center;
 
 
   background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  background-position: center 45%;
 
 
 }
@@ -1265,10 +1253,6 @@ justify-content: center;
 
   background-size: cover;
   background-position: top center;
-  background-repeat: no-repeat;
-
-
-
 
 }
 
@@ -1279,8 +1263,7 @@ grid-column: 1/2;
 
 
   background-size: cover;
-  background-position: center 10%;
-  background-repeat: no-repeat;
+  background-position: center 17%;
 
 }
 
@@ -1292,7 +1275,6 @@ grid-column: 1/2;
 
   background-size: cover;
   background-position: center center;
-  background-repeat: no-repeat;
 
 
 }
@@ -1304,8 +1286,7 @@ grid-column: 1/2;
   
 
   background-size: cover;
-  background-position: top center;
-  background-repeat: no-repeat;
+  background-position: center top;
 
 }
 
@@ -1316,8 +1297,7 @@ grid-column: 1/2;
   
 
   background-size: cover;
-  background-position: top center;
-  background-repeat: no-repeat;
+  background-position: center 50% ;
 
 }
 
@@ -1329,8 +1309,7 @@ grid-column: 1/2;
   
 
   background-size: cover;
-  background-position: bottom center;
-  background-repeat: no-repeat;
+  background-position: center 90%;
 
 }
 
@@ -1342,7 +1321,6 @@ grid-column: 1/2;
 
   background-size: cover;
   background-position: top center;
-  background-repeat: no-repeat;
 
 
 }
@@ -1354,7 +1332,6 @@ grid-column: 1/2;
 
   background-size: cover;
   background-position: center 1%;
-  background-repeat: no-repeat;
 
 
 }
@@ -1367,8 +1344,7 @@ grid-column: 1/2;
 
 
   background-size: cover;
-  background-position: center 90%;
-  background-repeat: no-repeat;
+  background-position: center 20%;
 
 }
 
@@ -1381,7 +1357,6 @@ grid-column: 1/2;
 
   background-size: cover;
   background-position: top center;
-  background-repeat: no-repeat;
 
 
 }
@@ -1394,7 +1369,7 @@ grid-column: 1/2;
 
   background-size: cover;
   background-position: center 50%;
-  background-repeat: no-repeat;
+
 
 
 
@@ -1406,9 +1381,8 @@ grid-column: 1/2;
   grid-row: 5/6;
 
 
-  background-size: 370px 100%;
-  background-position: center center;
-  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 45%;
  
 
 }
@@ -1420,8 +1394,7 @@ grid-column: 1/2;
 
 
   background-size: cover;
-  background-position: top center;
-  background-repeat: no-repeat;
+  background-position: center 70%;
 
 
 }
@@ -1434,7 +1407,6 @@ grid-column: 1/2;
 
   background-size: cover;
   background-position: top center;
-  background-repeat: no-repeat;
 
 }
 
@@ -1447,7 +1419,6 @@ grid-column: 1/2;
 
   background-size: cover;
   background-position: bottom bottom;
-  background-repeat: no-repeat;
 
 
 }
@@ -1460,924 +1431,14 @@ grid-column: 1/2;
 
   background-size: cover;
   background-position: top center;
-  background-repeat: no-repeat;
 
   }
 
-  .main-header{
 
-    margin-right:0px !important;
-    padding-right: 0px !important;
-  }
-   
-}
 
 #sub-section > .title-section{
 
    font-size: 2.6em;
 }
 
-
-
-
-
-
-/*
-@media all and (min-width:1200px) and (max-width:1427px){
-
-.center{
-
-  width:60%;
  }
-
- .logo #svg-logo{
-     width: 580px;
-     position: relative;
-     top: 50%;
-     margin-top: -144px;
-     left: 40%;
-     margin-left: -250px;
- }
-
- #leo{
-   
-   left:-100px;
-
- }
-
- 
-} 
-
-@media all and (min-width:1200px) and (max-width: 1390px){
-
-   .circle1, .circle3{
-
-    display: none;
-   }
-}
-
-
-@media all and (min-width:1024px) and (max-width:1200px){
-
-  .center{
-
-    width:70%;
-  }
-
-   .logo #svg-logo{
-     width: 580px;
-     position: relative;
-     top: 50%;
-     margin-top: -144px;
-     left: 40%;
-     margin-left: -250px;
- }
-
- .circle1, .circle3{
-
-    display: none;
-   }
-
-  #leo{
-   
-   left:-200px;
-
- }
-
-}
-
-
-@media all and (min-width:898px) and (max-width:1024px){
-
-  .center{
-
-    width:80%;
-  }
-
-     .logo #svg-logo{
-     width: 580px;
-     position: relative;
-     top: 50%;
-     margin-top: -144px;
-     left: 30%;
-     margin-left: -250px;
- }
-
- .circle1, .circle3{
-
-    display: none;
-   }
-
-   #leo{
-   
-   left:-300px;
-
- }
-
-}
-
-@media all and (min-width:800px) and (max-width:898px){
-
-  .center{
-
-    width:90%;
-  }
-
-  .logo #svg-logo{
-     width: 580px;
-     position: relative;
-     top: 50%;
-     margin-top: -144px;
-     left: 28%;
-     margin-left: -250px;
- }
-
- .circle1, .circle3{
-
-    display: none;
-   }
-
-   #leo{
-   
-   left:-400px;
-
- }
-}
-
-
-@media all and (min-width:768px) and (max-width:800px){
-
-  .center{
-
-    width:90%;
-}
-      .logo #svg-logo{
-     width: 580px;
-     position: relative;
-     top: 50%;
-     margin-top: -144px;
-     left: 28%;
-     margin-left: -250px;
- }
-
- .circle1, .circle3{
-
-    display: none;
-   }
-
-    #leo{
-   
-   left:-500px;
-
- }
-}
-
-  @media all and (min-width:477px) and (max-width:768px){
-
-  .center{
-
-    width:90%;
-   }
-      .logo #svg-logo{
-     width: 580px;
-     position: relative;
-     top: 50%;
-     margin-top: -144px;
-     left: 28%;
-     margin-left: -250px;
-   }
-
-  .circle1, .circle3{
-
-    display: none;
-   }
-
-   .brooklyn-man{
-
-    display: none;
-
-   }
-
-   .gallery-intro{
-  
-  height:2400px;
-  
-  display: grid;
-  grid-gap:5px;
-  grid-template-columns: repeat(auto-fill, minmax(372px, 1fr));
-  grid-template-rows: repeat(8, 300px);
-
-
-  }
-
-  .article2{
-
-  width:400px;
-   
- grid-template-areas: 
-                        "n"
-                        "t"
-                        "c";
-
-
-grid-template-columns: repeat(1, 400px);
-grid-template-rows: 400px 100px 350px;
-    }
-
-  #window-movie-selection{
-
-    margin-bottom: 0px;
-  }
-
-  .title-section{
-grid-area: n;
-text-align: center;
-margin-top: 0px;
-}
-
-#family-section{
-
-  height:  850px;
-}
-
-.top-section{
-
-  grid-area:t;
-}
-
-.content-section{
-
-  grid-area: c;
-}
-
-#leo{
-
-  display:none;
-}
-
-.movie-grid{
-
-  display: grid;
-
-  grid-gap: 10px;
-
-  grid-template: repeat(9, 300px) / repeat(1, 1fr);
-
-justify-content: center;
-
-}
-
-.movie-location:nth-child(1){
-
-  grid-column: 1/2;
-  grid-row: 1/2;
-
-  background-image: url("https://i.imgur.com/7rbuGYt.jpg");
-
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-
-   transform: translateX(-600px);
-
-}
-
-
-.movie-location:nth-child(2){
-
-  grid-column: 1/2;
-  grid-row: 2/3;
-
-    background-image: url("https://i.imgur.com/SG98mBL.jpg");
-
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-
-  transform: translateY(600px);
-}
-
-
-.movie-location:nth-child(3){
-
-  grid-column: 1/2;
-  grid-row: 3/4;
-
-    background-image: url("https://i.imgur.com/dPpZ3VT.jpg");
-
-  background-size: cover;
-  background-position: top center;
-  background-repeat: no-repeat;
-
- transform: translateX(-1000px);
-
-
-}
-
-.movie-location:nth-child(4){
-   
-grid-column: 1/2;
-  grid-row: 4/5;
-
-    background-image: url("https://i.imgur.com/TDj3ET4.jpg");
-
-  background-size: cover;
-  background-position: center 10%;
-  background-repeat: no-repeat;
-
-transform: translateX(900px);
-}
-
-.movie-location:nth-child(5){
-
-  grid-column: 1/2;
-  grid-row: 5/6;
-
-
-   background-image: url("https://i.imgur.com/jZV5rVP.jpg");
-
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-
- transform: translateX(900px);
-
-}
-
-.movie-location:nth-child(6){
-
-   grid-column: 1/2;
-  grid-row: 6/7;
-  
-background-image: url("https://i.imgur.com/4seJfTQ.jpg");
-
-  background-size: cover;
-  background-position: top center;
-  background-repeat: no-repeat;
-
- transform: translateX(900px);
-}
-
-.movie-location:nth-child(7){
-
-   grid-column: 1/2;
-  grid-row: 7/8;
-  
-background-image: url("https://i.imgur.com/gKa2Kd0.jpg");
-
-  background-size: cover;
-  background-position: top center;
-  background-repeat: no-repeat;
-
-  transform: translateX(600px);
-
-}
-
-
-.movie-location:nth-child(8){
-
-  grid-column: 1/2;
-  grid-row: 8/9;
-  
-background-image: url("https://i.imgur.com/6zbMOSZ.jpg");
-
-  background-size: cover;
-  background-position: bottom center;
-  background-repeat: no-repeat;
-
-transform: translateX(800px);
-}
-
-.movie-location:nth-child(9){
-
-  grid-column: 1/2;
-  grid-row: 9/10;
-
-
-  background-image: url(" https://i.imgur.com/DLvPSZy.jpg");
-
-  background-size: cover;
-  background-position: top center;
-  background-repeat: no-repeat;
-
-   transform: translateY(600px);
-
-}
-   .movie-location-kids:nth-child(1){
-
-  grid-column: 1/2;
-  grid-row: 1/2;
-
-  background-image: url("https://i.imgur.com/uiEcUm0.jpg");
-
-  background-size: cover;
-  background-position: center 1%;
-  background-repeat: no-repeat;
-
- transform: translateX(-600px);
-
-}
-
-
-.movie-location-kids:nth-child(2){
-
-   grid-column: 1/2;
-  grid-row: 2/3;
-
-    background-image: url("https://i.imgur.com/mOVg9IR.jpg");
-
-  background-size: cover;
-  background-position: center 90%;
-  background-repeat: no-repeat;
-
-transform: translateX(600px);
-
-}
-
-
-.movie-location-kids:nth-child(3){
-
-   grid-column: 1/2;
-  grid-row: 3/4;
-
-    background-image: url("https://i.imgur.com/YGVPKY3.jpg");
-
-  background-size: cover;
-  background-position: top center;
-  background-repeat: no-repeat;
-
-transform: translateX(-600px);
-
-}
-
-.movie-location-kids:nth-child(4){
-
-    grid-column: 1/2;
-  grid-row: 4/5;
-
-    background-image: url("https://i.imgur.com/T1s8EuC.jpg");
-
-  background-size: cover;
-  background-position: center 50%;
-  background-repeat: no-repeat;
-
-  transform: translateY(600px);
-
-
-}
-
-.movie-location-kids:nth-child(5){
-
-     grid-column: 1/2;
-  grid-row: 5/6;
-
-
-   background-image: url("https://i.imgur.com/4IqCixu.jpg");
-
-  background-size: 370px 100%;
-  background-position: center center;
-  background-repeat: no-repeat;
- 
- transform: translateX(-800px);
-
-}
-
-.movie-location-kids:nth-child(6){
-
-      grid-column: 1/2;
-  grid-row: 6/7;
-  
-background-image: url("https://i.imgur.com/QgcKLqo.jpg");
-
-  background-size: cover;
-  background-position: top center;
-  background-repeat: no-repeat;
-
-  transform: translateX(800px);
-
-}
-
-.movie-location-kids:nth-child(7){
-
-      grid-column: 1/2;
-  grid-row: 7/8;
-  
-background-image: url("https://i.imgur.com/3KDQDpA.jpg");
-
-  background-size: cover;
-  background-position: top center;
-  background-repeat: no-repeat;
-
-transform: translateY(600px);
-}
-
-
-.movie-location-kids:nth-child(8){
-
-     grid-column: 1/2;
-  grid-row: 8/9;
-  
-background-image: url("https://i.imgur.com/Zi5gAQe.jpg");
-
-  background-size: cover;
-  background-position: bottom bottom;
-  background-repeat: no-repeat;
-
-  transform: translateX(800px);
-
-}
-
-.movie-location-kids:nth-child(9){
-
-  grid-column: 1/2;
-  grid-row: 9/10;
-
-
-  background-image: url("https://i.imgur.com/iAjDW2b.jpg");
-
-  background-size: cover;
-  background-position: top center;
-  background-repeat: no-repeat;
-
-  }
-
-}
-
- @media all and (min-width:100px) and (max-width:478px){
-
-  .center{
-
-    width:95%;
-   }
-      .logo #svg-logo{
-     width: 580px;
-     position: relative;
-     top: 50%;
-     margin-top: -144px;
-     left: 28%;
-     margin-left: -250px;
-   }
-
-  .circle1, .circle3{
-
-    display: none;
-   }
-
-   .brooklyn-man{
-
-    display: none;
-
-   }
-
-   .gallery-intro{
-  
-  height:2400px;
-  
-  display: grid;
-  grid-gap:5px;
-  grid-template-columns: repeat(auto-fill, minmax(372px, 1fr));
-  grid-template-rows: repeat(8, 300px);
-
-
-  }
-
-
-
-  .article2{
-
-  width:300px;
-   
- grid-template-areas: 
-                        "n"
-                        "t"
-                        "c";
-
-
-grid-template-columns: repeat(1, 300px);
-grid-template-rows: 300px 100px 300px;
-    }
-
-  #window-movie-selection{
-
-    margin-bottom: 0px;
-  }
-
-  .title-section{
-grid-area: n;
-text-align: center;
-margin-top: 0px;
-font-size: 2.5em;
-}
-
-#family-section{
-
-  height:  850px;
-}
-
-.top-section{
-
-  grid-area:t;
-}
-
-.content-section{
-
-  grid-area: c;
-
-  font-size: 0.8em;
-}
-
-#leo{
-
-  display:none;
-}
-
-.movie-grid{
-
-  display: grid;
-
-  grid-gap: 10px;
-
-  grid-template: repeat(9, 300px) / repeat(1, 1fr);
-
-justify-content: center;
-
-}
-
-.movie-location:nth-child(1){
-
-  grid-column: 1/2;
-  grid-row: 1/2;
-
-  background-image: url("https://i.imgur.com/7rbuGYt.jpg");
-
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-
-   transform: translateX(-600px);
-
-}
-
-
-.movie-location:nth-child(2){
-
-  grid-column: 1/2;
-  grid-row: 2/3;
-
-    background-image: url("https://i.imgur.com/SG98mBL.jpg");
-
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-
-  transform: translateY(600px);
-}
-
-
-.movie-location:nth-child(3){
-
-  grid-column: 1/2;
-  grid-row: 3/4;
-
-    background-image: url("https://i.imgur.com/dPpZ3VT.jpg");
-
-  background-size: cover;
-  background-position: top center;
-  background-repeat: no-repeat;
-
- transform: translateX(-1000px);
-
-
-}
-
-.movie-location:nth-child(4){
-   
-grid-column: 1/2;
-  grid-row: 4/5;
-
-    background-image: url("https://i.imgur.com/TDj3ET4.jpg");
-
-  background-size: cover;
-  background-position: center 10%;
-  background-repeat: no-repeat;
-
-transform: translateX(900px);
-}
-
-.movie-location:nth-child(5){
-
-  grid-column: 1/2;
-  grid-row: 5/6;
-
-
-   background-image: url("https://i.imgur.com/jZV5rVP.jpg");
-
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-
- transform: translateX(900px);
-
-}
-
-.movie-location:nth-child(6){
-
-   grid-column: 1/2;
-  grid-row: 6/7;
-  
-background-image: url("https://i.imgur.com/4seJfTQ.jpg");
-
-  background-size: cover;
-  background-position: top center;
-  background-repeat: no-repeat;
-
- transform: translateX(900px);
-}
-
-.movie-location:nth-child(7){
-
-   grid-column: 1/2;
-  grid-row: 7/8;
-  
-background-image: url("https://i.imgur.com/gKa2Kd0.jpg");
-
-  background-size: cover;
-  background-position: top center;
-  background-repeat: no-repeat;
-
-  transform: translateX(600px);
-
-}
-
-
-.movie-location:nth-child(8){
-
-  grid-column: 1/2;
-  grid-row: 8/9;
-  
-background-image: url("https://i.imgur.com/6zbMOSZ.jpg");
-
-  background-size: cover;
-  background-position: bottom center;
-  background-repeat: no-repeat;
-
-transform: translateX(800px);
-}
-
-.movie-location:nth-child(9){
-
-  grid-column: 1/2;
-  grid-row: 9/10;
-
-
-  background-image: url(" https://i.imgur.com/DLvPSZy.jpg");
-
-  background-size: cover;
-  background-position: top center;
-  background-repeat: no-repeat;
-
-   transform: translateY(600px);
-
-}
-   .movie-location-kids:nth-child(1){
-
-  grid-column: 1/2;
-  grid-row: 1/2;
-
-  background-image: url("https://i.imgur.com/uiEcUm0.jpg");
-
-  background-size: cover;
-  background-position: center 1%;
-  background-repeat: no-repeat;
-
- transform: translateX(-600px);
-
-}
-
-
-.movie-location-kids:nth-child(2){
-
-   grid-column: 1/2;
-  grid-row: 2/3;
-
-    background-image: url("https://i.imgur.com/mOVg9IR.jpg");
-
-  background-size: cover;
-  background-position: center 90%;
-  background-repeat: no-repeat;
-
-transform: translateX(600px);
-
-}
-
-
-.movie-location-kids:nth-child(3){
-
-   grid-column: 1/2;
-  grid-row: 3/4;
-
-    background-image: url("https://i.imgur.com/YGVPKY3.jpg");
-
-  background-size: cover;
-  background-position: top center;
-  background-repeat: no-repeat;
-
-transform: translateX(-600px);
-
-}
-
-.movie-location-kids:nth-child(4){
-
-    grid-column: 1/2;
-  grid-row: 4/5;
-
-    background-image: url("https://i.imgur.com/T1s8EuC.jpg");
-
-  background-size: cover;
-  background-position: center 50%;
-  background-repeat: no-repeat;
-
-  transform: translateY(600px);
-
-
-}
-
-.movie-location-kids:nth-child(5){
-
-     grid-column: 1/2;
-  grid-row: 5/6;
-
-
-   background-image: url("https://i.imgur.com/4IqCixu.jpg");
-
-  background-size: 370px 100%;
-  background-position: center center;
-  background-repeat: no-repeat;
- 
- transform: translateX(-800px);
-
-}
-
-.movie-location-kids:nth-child(6){
-
-      grid-column: 1/2;
-  grid-row: 6/7;
-  
-background-image: url("https://i.imgur.com/QgcKLqo.jpg");
-
-  background-size: cover;
-  background-position: top center;
-  background-repeat: no-repeat;
-
-  transform: translateX(800px);
-
-}
-
-.movie-location-kids:nth-child(7){
-
-      grid-column: 1/2;
-  grid-row: 7/8;
-  
-background-image: url("https://i.imgur.com/3KDQDpA.jpg");
-
-  background-size: cover;
-  background-position: top center;
-  background-repeat: no-repeat;
-
-transform: translateY(600px);
-}
-
-
-.movie-location-kids:nth-child(8){
-
-     grid-column: 1/2;
-  grid-row: 8/9;
-  
-background-image: url("https://i.imgur.com/Zi5gAQe.jpg");
-
-  background-size: cover;
-  background-position: bottom bottom;
-  background-repeat: no-repeat;
-
-  transform: translateX(800px);
-
-}
-
-.movie-location-kids:nth-child(9){
-
-  grid-column: 1/2;
-  grid-row: 9/10;
-
-
-  background-image: url("https://i.imgur.com/iAjDW2b.jpg");
-
-  background-size: cover;
-  background-position: top center;
-  background-repeat: no-repeat;
-
-  }
-
- }
-*/
-
- 
