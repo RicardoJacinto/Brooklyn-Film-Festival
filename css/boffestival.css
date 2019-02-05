@@ -28,9 +28,23 @@ body{
 a{
 font-style: none;
 text-decoration:none;
-color: white;
+color: #FFFFFF;
 
+border-bottom: 3px solid transparent;
+background-color:rgba(255,136,0,0);
 
+transition: all 0.3s ease-in-out;
+
+}
+
+a:hover{
+
+  border-color: rgba(255, 136, 0, 0.9);
+}
+
+.visited{
+
+  color: rgb(0, 0, 0) !important;
 }
 
 h1, h2{
@@ -66,8 +80,9 @@ hr{
 
 #mobile-nav{
     
-   
+  
    width: 95%;
+
    position: absolute;
 
   z-index: 1000;
@@ -90,35 +105,49 @@ hr{
 
   float: right;
   display: none;
+   
+   width:320px;
+   height:120px;
+   border-radius: 20px;
+   padding: 10px;
+   margin: 10px;
+
+    text-align: center;
 
   font-size:0.9em;
-
+  background-color:  rgba(0,0,0,0.2);
   font-family: "Alegreya Sans SC";
 
+}
 
+#container-mobile > p{
 
+ display: inline-block; 
+ padding: 5px 10px;
 
 }
 
 #navbar{
+  
+  width:90%;
+  background-color: rgba(0,0,0,0.3);
+  height:50px;
 
-  
-  width: 100% !important;
-
-  height:100px;
-  color: white;
-  
-  
+  margin: 10px auto;
+  border-radius: 20px;
   font-size: 0.8em;
+
   font-family: "Alegreya Sans SC";
 
-  display: flex;
-  flex-wrap: wrap;
+  display: flex !important;
+  flex-wrap: wrap !important;
 
   flex-direction: row;
 
   justify-content: space-around;
   align-items: center;
+
+
 }
 
 /* #fadein effect of navbar's elements */
@@ -131,16 +160,18 @@ hr{
 .sticky{
 
   position: fixed;
-
+   
+   margin: 0 0 !important;
+  border-radius: 0px !important;
   margin-left: -5px !important; 
   width: 100% !important;
   height:50px !important;
   top:0;
   
-  background-color:rgba(0,0,0,1);
+  background-color:rgba(0,0,0,1) !important;
   z-index:100;
 
-  transition: all 0.3s  ease-in-out;
+  transition: all 0.1s  ease-in-out;
 }
 
 .logo{
@@ -163,7 +194,7 @@ hr{
 
 /* .path(n) referes to the classes addresing the #svg-logo. This will style the different layers of the svg with a white fill  */
 .path, .path1, .path2{
-    fill: #FFFFFF;
+    fill: black;
 }
 
 
@@ -354,19 +385,6 @@ figcaption{
 
 }
 
-/*.article2{
-
-
-margin-top: 50px;
-margin-bottom: 50px;
-
-  display:grid;
-  
-  grid-column-gap: 20px;
-  grid-template: 100px 300px / repeat(2 , minmax(350px,395px));
-  
-} */
-
 .article2{
  
   margin-top: 50px;
@@ -375,7 +393,7 @@ margin-bottom: 50px;
   display:grid;
   
   grid-column-gap: 10px;
-  grid-template: 100px 300px/ repeat(2 , minmax( 360px, 390px));
+  grid-template: 100px 390px/ repeat(2 , minmax( 360px, 390px));
   
 }
 
@@ -419,10 +437,6 @@ align-self: start;
  
 }
 
-
-
-
-
 .top-section div:nth-child(1){
  
  height: 50%;
@@ -465,7 +479,7 @@ box-shadow: inset 7px 9px 31px 2px rgba(0,0,0,0.78);
 .content-section{
 
   grid-row: 2/3;
- 
+ padding: 10px;
  border-radius: 10px;
  background: #303030;
 background: -moz-linear-gradient(top, #303030 0%, #4E4E4E 50%, #5B5B5B 100%);
@@ -856,6 +870,33 @@ background: linear-gradient(45deg, #FF64EA 0%, #B447A5 55%, #86357B 100%);
   width: 60%;
 }
 
+.center-footer ul > li{
+
+  padding: 5px;
+}
+
+#icon-ul{
+  
+  list-style: none;
+
+}
+
+#facebook, #instagram, #twitter{
+
+  font-size: 30px;
+  border-right: 4px solid transparent;
+  border-radius: 10px;
+
+  transition: all 1s ease-in-out ;
+
+  padding: 5px;
+}
+
+#facebook:hover, #instagram:hover, #twitter:hover{
+   
+   border-color: orange;
+
+}
 #author{
 
   margin: 50px auto;
@@ -1006,6 +1047,7 @@ background-image: url("https://i.imgur.com/QmZh6ZT.jpg");
 
 }
 
+
 #placeholder{
 
   height: 200px;
@@ -1031,7 +1073,7 @@ background-image: url("https://i.imgur.com/QmZh6ZT.jpg");
 #span-side > p{
   
   font-size: 0.8em;
-  margin: 25px auto;
+  margin: 38px auto;
 }
 
 input:focus,
@@ -1049,15 +1091,27 @@ button:focus {
 
 }
 
+#form-side{
+
+   font-size: 0.8em;
+}
+
 
 #password, #username, #submit, #ticket-number, #emailAddress{
   
-   border-radius:20px;
+   border-radius:15px;
    border-width: 3px;
    background:none;
    border-color: rgb(255,255,255);
    border-style: solid;
    color: white;
+   padding: 8px;
+}
+
+#submit{
+
+  margin: 10px 0px;
+  width: 100px;
 }
  
  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -1071,6 +1125,11 @@ button:focus {
 }
 :-moz-placeholder { /* Firefox 18- */
   color: white;
+}
+
+#subtract-ticket, #subtract-ticket-1{
+
+    color: rgb(82, 204, 22);
 }
 
 /* Media Queries ----------------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -1097,21 +1156,22 @@ button:focus {
 @media all and (min-width:768px) and (max-width:874px){
 
 
-.brooklyn-man{
+.brooklyn-man, #leo{
 
   display:none;
 }
 
-#leo{
 
-  display:none;
-}
-   .gallery-intro{
+.gallery-intro{
 
     height: 2400px;
    }
 
+#navbar{
 
+  display: flex !important;
+  flex-wrap:  wrap !important; 
+}
   
 }
 
@@ -1130,7 +1190,12 @@ button:focus {
   display: block;
  }
 
- #navbar, .brooklyn-man, #leo{
+#navbar{
+
+  display:none !important;
+}
+
+.brooklyn-man, #leo{
 
   display:none;
  }
@@ -1181,8 +1246,8 @@ button:focus {
                         "c";
 
 
-grid-template-columns: repeat(1, 315px);
-grid-template-rows: 300px 100px 350px;
+grid-template-columns: repeat(1, 350px);
+grid-template-rows: 300px 100px 390px;
     }
 
 
