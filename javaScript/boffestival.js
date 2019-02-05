@@ -1,8 +1,10 @@
 
-
+//On page load functions-----------------------------------------------------------------------------------------------------------------------------------------------------
+// hide div sections in order to load as you scroll down the page.
 $(document).ready(function(){
 
 	$('.path').hide();
+	$('#navbar').hide();
 	$('#intro-text').hide();
 	$('#marathon-section').hide();
 	$('#movie-selection').hide();
@@ -15,7 +17,8 @@ $(document).ready(function(){
 	$('#footer').hide();
 
 
-	$('.navbar-items, .navbarM-items').on('click', function(){
+// if a navbar-item is clicked than show every item on the page
+$('.navbar-items, .navbarM-items').on('click', function(){
 
 	$('.path').show();
 	$('#intro-text').show();
@@ -29,7 +32,6 @@ $(document).ready(function(){
 	$('#sub-section').show();
 	$('#footer').show();
 
-
 	});
 
 	$(".fa-bars").on("click", function(e){
@@ -38,90 +40,84 @@ $(document).ready(function(){
 
      });
 
+// Get input fields
+var username = document.querySelector('#username');
+var pass = document.getElementById("password");
+var email = document.getElementById("emailAddress");
+var ticketNumber = document.querySelector('#ticket-number');
+var submit = document.querySelector("#submit");
 
+// Get spans 
+var ticketCap = document.querySelector('#ticket-cap');
+var subtractTicket= document.getElementById('subtract-ticket');
+var subtractTicket1 = document.getElementById('subtract-ticket-1')
 
+// Help section variables
+var ticketsHelp = document.querySelector('#ticketsHelp');
+var userNameHelp = document.querySelector('#userNameHelp');
 
-    		var ticketNumber = document.querySelector('#ticket-number');
-    		var ticketCap = document.querySelector('#ticket-cap');
-    		var subtractTicket = document.querySelector('#subtract-ticket');
+// Set correct colors variables depending on user input
+var correctColor = "#a0ff77";
+var incorrectColor = "red";
+    	
 
-    		var ticketsHelp = document.querySelector('#ticketsHelp');
-
-    		var correctColor = "#a0ff77";
- 			var incorrectColor = "red";
-    		
-
-    		ticketNumber.addEventListener("input" , function(e){
+//check if #ticket-number is on the correct range
+ticketNumber.addEventListener("blur" , function(e){
    
-  				if( (e.target.value > 5) || (e.target.value <= 0)){
+  	if( (e.target.value > 5) || (e.target.value <= 0)){
    
-                   
-    				submit.setAttribute("disabled", "true");
-    		         ticketsHelp.textContent = "Invalid"
-    		         ticketsHelp.style.color = incorrectColor;
+       submit.setAttribute("disabled", "true");
+       ticketsHelp.textContent = "Invalid"
+       ticketsHelp.style.color = incorrectColor;
 
-   				}else{
+   	  }else{
 
-   					 ticketsHelp.textContent = "Valid"
-   					 ticketCap.textContent = Number(e.target.value);
-     				subtractTicket.textContent = 5000 - Number(e.target.value);
-     				   ticketsHelp.style.color = correctColor;
+   	     ticketsHelp.textContent = "Valid"
+   	     ticketCap.textContent = Number(e.target.value);
+         ticketsHelp.style.color = correctColor;
 
-   					  if( messageFocus.textContent === "Valid" && passwordHelp.textContent ==="Valid" && emailHelp.textContent ==="Valid" &&  ticketsHelp.textContent === "Valid" ){
+   	     if( userNameHelp.textContent === "Valid" && passwordHelp.textContent ==="Valid" && emailHelp.textContent ==="Valid" &&  ticketsHelp.textContent === "Valid" ){
      				
      				 submit.removeAttribute("disabled");
 
-
                   }
-   				}
-  			
-});
-   var username	= document.querySelector('#username');
-   
-   var messageFocus = document.querySelector('#userNameHelp');
+   			   }
+         });
 
+  // check if username input has the correct length
   username.addEventListener('input', function(e){
              
-    console.log(Number(e.target.value.length))
-
   	 if( Number(e.target.value.length) >= 3 && Number(e.target.value.length) <= 12 ){
           
-         messageFocus.textContent = "Valid";
+         userNameHelp.textContent = "Valid";
 
-         if( messageFocus.textContent === "Valid" && passwordHelp.textContent ==="Valid" && emailHelp.textContent ==="Valid" && ticketsHelp.textContent === "Valid"){
+         if( userNameHelp.textContent === "Valid" && passwordHelp.textContent ==="Valid" && emailHelp.textContent ==="Valid" && ticketsHelp.textContent === "Valid"){
 
          	  submit.removeAttribute("disabled"); 
-         }
-         messageFocus.style.color = correctColor;  
-        
+          }
 
+         userNameHelp.style.color = correctColor;  
+        
   	 }else{
 
-  		messageFocus.textContent = "Invalid";
-  		 messageFocus.style.color = incorrectColor;
+  		userNameHelp.textContent = "Invalid";
+  		userNameHelp.style.color = incorrectColor;
   		submit.setAttribute("disabled", "true");
-
-  	}
-
+  	 
+  	  }
   });
-     
-
- var getUser = document.querySelector("#username");
-
-var pass = document.getElementById("password");
 
 
+// check if password input has the correct length     
 pass.addEventListener("input", function(e){
  
  var password = e.target.value;
- 
-
 
  if(password.length >= 6 && password.length <=12){
 
  	passwordHelp.textContent = "Valid";
  	passwordHelp.style.color = correctColor;
- 	if( messageFocus.textContent === "Valid" && passwordHelp.textContent ==="Valid" && emailHelp.textContent ==="Valid" && ticketsHelp.textContent === "Valid"){
+ 	if( userNameHelp.textContent === "Valid" && passwordHelp.textContent ==="Valid" && emailHelp.textContent ==="Valid" && ticketsHelp.textContent === "Valid"){
 
          	  submit.removeAttribute("disabled"); 
          }
@@ -131,14 +127,11 @@ pass.addEventListener("input", function(e){
   passwordHelp.style.color = incorrectColor;
   submit.setAttribute("disabled", "true");
 
- }
-
+   }
 });
 
-// Checking an email address once it's entered
 
-var email = document.getElementById("emailAddress");
-
+// Checking an email address is entered correctly
 email.addEventListener("blur", function (e) {
    var emailRegex = /.+@.+\..+/;
   
@@ -152,45 +145,51 @@ email.addEventListener("blur", function (e) {
 
     	emailHelp.textContent = "Valid";
  	    emailHelp.style.color = correctColor;
-       if( messageFocus.textContent === "Valid" && passwordHelp.textContent ==="Valid" && emailHelp.textContent ==="Valid" && ticketsHelp.textContent === "Valid"){
+       if( userNameHelp.textContent === "Valid" && passwordHelp.textContent ==="Valid" && emailHelp.textContent ==="Valid" && ticketsHelp.textContent === "Valid"){
 
          	  submit.removeAttribute("disabled"); 
          }
     }
 });
 
-
-
-var submit = document.querySelector("#submit");
-
+// set preventDefault to avoid default behaviour from submit and reset all the variables
 submit.addEventListener('click', function(e){
  
  e.preventDefault();
  pass.value = "";
  username.value="";
  email.value="";
- ticketNumber.value = 0;
- subtractTicket.textContent = 5000;
+
  ticketCap.textContent = "0";
  emailHelp.textContent="";
  passwordHelp.textContent="";
- messageFocus.textContent="";
+ userNameHelp.textContent="";
  ticketsHelp.textContent="";
 
+
+//Get value from spans through textContent, convert it to a number and then subtract it with ticketNumber.value from input
+var getValSpan = Number(subtractTicket.textContent);
+var getValSpan1 = Number(subtractTicket1.textContent);
+
+
+subtractTicket.textContent = getValSpan -  Number(ticketNumber.value);
+subtractTicket1.textContent = getValSpan1 - Number(ticketNumber.value);
+
+// reset ticket Number Value
+ticketNumber.value = 0;
 
 })
 
 
-	var navbarList = document.querySelectorAll(".navbar-items");
-    var iterateItems = 0;
+var navbarList = document.querySelectorAll(".navbar-items");
+var iterateItems = 0;
 
-
+// On page load, fade in each navbar-item
 navbarList.forEach(function(item){
-            
+
 		    setTimeout(function(){
 				
 		    	item.style.opacity = "1";
-		    
 		    
 		    }, (500*(iterateItems+1)));
 	       
@@ -198,30 +197,33 @@ navbarList.forEach(function(item){
 			
 		});
 
+//Fade navbar on page load		
+$('#navbar').fadeIn(1500);	
 
-	$('.path').fadeIn(1000);
+//fade title on page load
+$('.path').fadeIn(1000);
 
-    var letterList = document.querySelectorAll(".path2");
+var letterList = document.querySelectorAll(".path2");
+ 
 
-	titleLettersShow(letterList);
+ // Fade in letters on top of the title with callback function   
+ titleLettersShow(letterList);
+
 });
 
+// On mouse over pic, increment ficaption id in order to identify current position and start animation with translateX
 $('.picture').each(function(pic){
 
-
-$(this).on("mouseover", function(){
-	
+		$(this).on("mouseover", function(){
+					
 				$('#figcaption' + parseInt(pic+1) + '').css({
-
 					transform: 'translateX(0px)'
 				});
-
 		});
-
 })		
 
 
-
+// On mouse leave bring ficpation to it's original position
 $('.picture').on("mouseleave", function(e){
 
 		$('figcaption').css({
@@ -230,77 +232,83 @@ $('.picture').on("mouseleave", function(e){
 		})
 });
 
-//listen to the scroll of the window
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//listen to the scroll of the window---------------------------------------------------------------------------------------------------------------------------------------------------
 $(window).scroll(function(e){
      
-   
+    // This variable is very important as it tracks the window's scrollTop(); position and all animations are triggered based on this value
 	let scrollTop = $(this).scrollTop();
 
-
+	// Had class sticky in order to fix navbar to the top of $(window), when scrollTop value is bigger than main-header's div bottom position. By adding  + $('.main-header').height(), we can calculate the height of the DIV and reach to bottom of it.
     if(scrollTop >= $('.main-header').offset().top + $('.main-header').height()){ 
         
-
           $('#navbar').addClass('sticky');
 
     }else{
+
     	$('#navbar').removeClass('sticky');
 
     }
 
-	
+	// While scroling down, .logo will translate/4 on the Y AXIS relative to the scrollTop variable.
 	$('.logo').css({
 
 		transform: 'translate(0px, ' + scrollTop/4 + '%)'
 	});
-
+    // While scroling down, .brooklyn-man will translate/4  on the Y AXIS relative to the scrollTop variable.
 	$('.brooklyn-man').css({
 
 		transform: 'translate(-' +scrollTop/32 + '%, -' + scrollTop/32 + '%)'
 	});
 
-	
-	var pictureList = document.querySelectorAll(".picture");
-    var iteration = 0;
-
+    //Same logic as before, when hitting bottom of main-header-200 fadeIn #intro-text
+    
 	if(scrollTop > $('.main-header').offset().top + ($('.main-header').height()-200) ){ 
 
 		$('#intro-text').fadeIn(1000);
 
 	}
 
-if($('#intro-text').offset().top !=0){
+//get pictures	
+var pictureList = document.querySelectorAll(".picture");
+var iteration = 0;
 
-	if(scrollTop > $('#intro-text').offset().top +  $('#intro-text').height()-200 ){ 	 
 
+		// Added this variable as a control method as somethimes the offset().top was set to 0 randomly and would conflict with scrollTop, because scrollTop > 0
+		if($('#intro-text').offset().top !=0){
+
+			if(scrollTop > $('#intro-text').offset().top +  $('#intro-text').height()-200 ){ 	 
+
+					pictureList.forEach(function(pic){
+	            		// had a delay with setTimeout function in order to load pictures to the page with a sligth delay
+					    setTimeout(function(){
+
+			 		   	pic.classList.add('show-pics-y');
+		
+			    
+			 		   }, (125*(iteration+1)));
+		       
+						iteration++;
+					});
+	             }  
+              }
+
+
+// Get squares on top of article2
+var maratonList = document.querySelectorAll(".mara-square");
     
-		pictureList.forEach(function(pic){
-            
-		    setTimeout(function(){
+ 		if($('.gallery-intro').offset().top !=0){   
 
-		    	pic.classList.add('show-pics-y');
+			if(scrollTop > $('.gallery-intro').offset().top + ( $('.gallery-intro').height() -200) ){ 
 
-		    
-		    }, (125*(iteration+1)));
-	       
-			iteration++;
-		});
+				$('#marathon-section').fadeIn(1000);
+ 				
+ 				//use call back function to elevate the squares
+				elevateSquares(maratonList);
 
-	}  
-
-}
-
-	var maratonList = document.querySelectorAll(".mara-square");
-    
- if($('.gallery-intro').offset().top !=0){   
-
-	if(scrollTop > $('.gallery-intro').offset().top + ( $('.gallery-intro').height() -200) ){ 
-
-		$('#marathon-section').fadeIn(1000);
- 		
-		elevateSquares(maratonList);
-
-	}
-}
+			}
+		}
 
 	var circleList = document.querySelectorAll(".circle");
     var iterateCircle = 0;
