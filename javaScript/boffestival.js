@@ -31,10 +31,14 @@ $('.navbar-items, .navbarM-items').on('click', function(){
 	$('#latest-news').show();
 	$('#sub-section').show();
 	$('#footer').show();
-   
-   $(this).addClass("clicked");
 
-	});
+   // Because there can only be one active link, removing all clicked classes from the nav items will do the trick to give the impression there's only one active state
+   $('.navbar-items, .navbarM-items').removeClass('clicked');
+   // Add class clicked to the clicked nav item;
+   $(this).addClass('clicked');
+         
+
+  });
 
 
 	$(".fa-bars").on("click", function(e){
