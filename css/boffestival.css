@@ -42,15 +42,10 @@ a:hover{
   border-color: rgba(255, 136, 0, 0.9);
 }
 
-a:visited{
+.clicked{
 
-   color: rgb(255, 136, 0);
-}
+ background-color:rgb(206, 22, 22); 
 
-
-.visited{
-
-  color: rgb(0, 0, 0) !important;
 }
 
 h1, h2{
@@ -159,6 +154,8 @@ hr{
 /* #fadein effect of navbar's elements */
 .navbar-items{
   opacity: 0;
+  padding:5px;
+  border-radius: 10px;
  transition: all 1s 1s ease-in-out;
 }
 
