@@ -1,5 +1,6 @@
 /*General Styling--------------------------------------------------------------------------------------------------------------------------------- */
 
+/* Smooth scrool-behaviour when links are clicked */
 html {
   scroll-behavior: smooth;
 }
@@ -11,16 +12,15 @@ body{
   background-color: #ededef;
 }
 
+/* Override bootstraps default 15px padding */
 .container-fluid{
-
   padding: 0 5px !important;
 }
 
+/* remove any paddings from the main container to make sure it's strecthed to the limit. Overflow hidden to contain the animations of child elements*/
 #container-main{
-
-  width: 100% !important;
-  margin: 0px 0px !important;
-  padding: 0px 0px !important;
+  margin: 0px 0px;
+  padding: 0px 0px;
 
   overflow: hidden;
 }
@@ -32,20 +32,16 @@ color: #FFFFFF;
 
 border-bottom: 3px solid transparent;
 background-color:rgba(255,136,0,0);
-
 transition: all 0.3s ease-in-out;
-
 }
 
 a:hover{
-
   border-color: rgba(255, 136, 0, 0.9);
 }
 
+/* This class is added with jQuery everytime a link from the navbar is clicked, in order to save the links visited by the user and improve UX  */
 .clicked{
-
  background-color:rgb(206, 22, 22); 
-
 }
 
 h1, h2{
@@ -63,11 +59,22 @@ hr{
   border-top: 1px solid rgba(20,20,20,0.1);
 }
 
+/* Aligns items to the middle of the page */
+.center{
+  margin: 0 auto;
+}
+
+/* Remove outline from inputfields */
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
 /*Header-Section---------------------------------------------------------------------------------------------------------------------------------*/
 
 /* .main-header has position relative in order to anchor the absolute elements within */
 .main-header{
-  
   position: relative;
   height: 800px;
   background-image: url("https://i.imgur.com/UDsn8R2.jpg");
@@ -77,67 +84,13 @@ hr{
   overflow: hidden;
 }
 
-/* #navbar section */
-
-#mobile-nav{
-    
-  
-   width: 95%;
-
-   position: absolute;
-
-  z-index: 1000;
-  display:none;
-
-}
-
-.fa-bars{
-
-    font-size: 30px;
-    color: white;
-    
-    margin: 10px 10px ;
-    float:right;
-    display: block;
-
-}
-
-#container-mobile{
-
-  float: right;
-  display: none;
-   
-   width:200px;
-   height:300px;
-   border-radius: 20px;
-   padding: 10px;
-   margin: 10px;
-
-    text-align: center;
-
-  font-size:0.9em;
-  background-color:  rgb(0,0,0);
-  font-family: "Alegreya Sans SC";
-
-}
-
-#container-mobile > p{
-
- display: inline-block; 
- padding: 5px 10px;
-
-}
-
 #navbar{
-  
   width:90%;
   background-color: rgba(0,0,0,0.3);
   height:50px;
-
   margin: 10px auto;
   border-radius: 20px;
   font-size: 0.8em;
-
   font-family: "Alegreya Sans SC";
 
   display: flex !important;
@@ -147,8 +100,6 @@ hr{
 
   justify-content: space-around;
   align-items: center;
-
-
 }
 
 /* #fadein effect of navbar's elements */
@@ -161,24 +112,63 @@ hr{
 
 /* add class sticky to #navbar when reaching a certain point on the page so it stays fixed at top of the page*/
 .sticky{
-
   position: fixed;
-   
-   margin: 0 0 !important;
-  border-radius: 0px !important;
-  margin-left: -5px !important; 
+  top:0;
   width: 100% !important;
   height:50px !important;
-  top:0;
-  
+
+  margin: 0 0 !important;
+  margin-left: -5px !important; 
+  border-radius: 0px !important;
+
   background-color:rgba(0,0,0,1) !important;
   z-index:100;
 
-  transition: all 0.1s  ease-in-out;
+  transition: all 0.3s  ease-in-out;
 }
 
-.logo{
+/* #mobile-nav has display none until it reaches a certain view port size */
+#mobile-nav{
+   width: 95%;
+   position: absolute;
+   z-index: 1000;
+   display:none;
+}
 
+/* Hamburger icon is hidden until a certain view port view */
+.fa-bars{
+    font-size: 30px;
+    color: white;
+    margin: 10px 10px ;
+    float:right;
+    display: block;
+}
+
+/* This is the container the holds all the mobile-navbar items */
+#container-mobile{
+  float: right;
+  display: none;
+   
+   width:200px;
+   height:300px;
+   border-radius: 20px;
+   padding: 10px;
+   margin: 10px;
+
+  text-align: center;
+
+  font-size:0.9em;
+  background-color:  rgb(0,0,0);
+  font-family: "Alegreya Sans SC";
+}
+
+#container-mobile > p{
+   display: inline-block; 
+   padding: 5px 10px;
+}
+
+ 
+.logo{
     position:absolute;
     top:20%;
     height:300px;  
@@ -186,7 +176,6 @@ hr{
 
 /* I set the position of #svg-logo to relative in order to move element around relative to it's parent div (.logo)*/
 .logo #svg-logo{
-
      width: 600px;
      position: relative;
      top: 50%;
@@ -200,11 +189,10 @@ hr{
     fill: black;
 }
 
-
   #logo-svg1  path{
 
         fill: rgb(255, 255, 255);
-         stroke: rgb(61, 60, 60);
+        stroke: rgb(61, 60, 60);
         stroke-width: 3px;
    }
 
@@ -230,7 +218,6 @@ hr{
   }
 }
 
-
   /* .path2 referes to the little letters on top of the logo. They have opacity zero and translateX(-100px) as they will lock into place with a callback function(which adds class .show-letters) on page load */
  .path2{
   opacity:0;
@@ -239,6 +226,7 @@ hr{
   transition: all 0.5s ease-in-out;
 }
 
+/* Show-letters animates the little letters on top of titles when you reach a certain point in the window */
 .show-letters{
     opacity:1 !important;
     transform: translateX(0px) !important;
@@ -256,6 +244,7 @@ hr{
     overflow:hidden;
 }
 
+/* #intro-text section ----------------------------------------------------------------------------------------------------------- */
 
 #intro-text{
   margin: 50px auto;
@@ -265,7 +254,10 @@ hr{
 .article p{
   margin: 50px auto;
 }
+/* Gallery intro-section ------------------------------------------------------------------------------------------------------- */
 
+
+/* Auto fill grid depending on screen size, where columns have to be between 340px and 1fr and height 300px */
 .gallery-intro{
   
   height: 900px;
@@ -276,6 +268,7 @@ hr{
   grid-template-rows: repeat(auto-fill, 300px);
 }
 
+/* Setting up all background images for every .picture div */
 .gallery-intro div:nth-child(1){
 
    background-image: url("https://i.imgur.com/3ZjeiTC.jpg") !important; 
@@ -338,7 +331,8 @@ hr{
     background-position: center center;
 
 }
-
+ 
+ /* Setting up the transition of picture */
  .picture{
  
  opacity: 0;
@@ -350,6 +344,7 @@ font-size: 0.7em;
 
 }
 
+/* While hover scale every picture */
 .picture:hover{
 
   transform: scale(1.015);
@@ -373,37 +368,29 @@ figcaption{
   transform: translateX(-600px);
 }
 
-  
+/* This class gets called with jQuery in order to make pictures visible */
 .show-pics-y{
-
   opacity: 1;
   transform: translateY(0px);
 }
 
-  
-
-.center{
-
-  margin: 0 auto;
-
-}
-
+/* Setting up a grid for article2 with two columns with minwitdh of 360px and maxwidth of 390px. Two rows of height 100px and 390px */
 .article2{
- 
-  margin-top: 50px;
+
+margin-top: 50px;
 margin-bottom: 50px;
 
-  display:grid;
+display:grid;
   
-  grid-column-gap: 10px;
-  grid-template: 100px 390px/ repeat(2 , minmax( 360px, 390px));
+grid-column-gap: 10px;
+grid-template: 100px 390px/ repeat(2 , minmax( 360px, 390px));
   
 }
+
 
 .title-section{
 
 grid-row: 1/3;
-
 font-family: 'Bowlby One SC';
 font-size: 3em;
 color:#303030;
@@ -422,7 +409,8 @@ align-self: start;
   
 }
 
-.mara-square, .mara-square3{
+/* Setting up the mara-squares style which is inside every .top-section */
+.mara-square, .mara-square2, .mara-square3{
 
   background-color: #303030;
  
@@ -440,6 +428,7 @@ align-self: start;
  
 }
 
+/* setup every mara-square position to be animated on jQuery callback*/
 .top-section div:nth-child(1){
  
  height: 50%;
@@ -465,7 +454,6 @@ box-shadow: inset -20px -1px 34px 0px rgba(0,0,0,0.78);
 
 transform: translateY(160px);
 }
-
 
 .top-section div:nth-child(3){
 
@@ -501,18 +489,18 @@ background: linear-gradient(to bottom, #303030 0%, #4E4E4E 50%, #5B5B5B 100%);
 
 }
 
+/* movie-window ------------------------------------------------------------------------------------------------------------------ */
 
+/* Flex container with circles inside them */
 .movie-window{
 
   width: 90%;
   height:500px;
   margin: 50px auto;
-
   position: relative;
 
   display: flex;
   flex-wrap: wrap;
-
   flex-direction: row;
 
   justify-content: space-around; 
@@ -530,7 +518,6 @@ background: linear-gradient(to bottom, #303030 0%, #4E4E4E 50%, #5B5B5B 100%);
   border-radius: 200px;
   opacity: 0;
 
-
 }
 
 .circle-movie{
@@ -544,18 +531,16 @@ background: linear-gradient(to bottom, #303030 0%, #4E4E4E 50%, #5B5B5B 100%);
 
 
 .circle1{
-    
   
     z-index:3;
     left:0;
   
-background: -moz-linear-gradient(-45deg, #FF0000 0%, #EC0000 50%, #DB0000 100%);
-background: -webkit-linear-gradient(-45deg, #FF0000 0%, #EC0000 50%, #DB0000 100%);
-background: linear-gradient(135deg, #FF0000 0%, #EC0000 50%, #DB0000 100%);
- 
- transform: translateX(-500px);
-
-  transition: all 1s 0s ease-in-out;
+    background: -moz-linear-gradient(-45deg, #FF0000 0%, #EC0000 50%, #DB0000 100%);
+    background: -webkit-linear-gradient(-45deg, #FF0000 0%, #EC0000 50%, #DB0000 100%);
+    background: linear-gradient(135deg, #FF0000 0%, #EC0000 50%, #DB0000 100%);
+     
+    transform: translateX(-500px);
+    transition: all 1s 0s ease-in-out;
 
 }
 
@@ -566,48 +551,42 @@ background: linear-gradient(135deg, #FF0000 0%, #EC0000 50%, #DB0000 100%);
   left: 50%;  
   margin-left: -200px;
 
-background: -moz-linear-gradient(-45deg, #FF0000 0%, #C10000 50%, #7A0000 100%);
-background: -webkit-linear-gradient(-45deg, #FF0000 0%, #C10000 50%, #7A0000 100%);
-background: linear-gradient(135deg, #FF0000 0%, #C10000 50%, #7A0000 100%);
+    background: -moz-linear-gradient(-45deg, #FF0000 0%, #C10000 50%, #7A0000 100%);
+    background: -webkit-linear-gradient(-45deg, #FF0000 0%, #C10000 50%, #7A0000 100%);
+    background: linear-gradient(135deg, #FF0000 0%, #C10000 50%, #7A0000 100%);
 
 transform: translateX(-1000px);
-
  transition: all 1s 0s ease-in-out;
 }
 
 .circle3{
-
 z-index:1;
 right:0;
+
 background: -moz-linear-gradient(-45deg, #860000 0%, #A00000 50%, #AA0000 100%);
 background: -webkit-linear-gradient(-45deg, #860000 0%, #A00000 50%, #AA0000 100%);
 background: linear-gradient(135deg, #860000 0%, #A00000 50%, #AA0000 100%);
 
 transform: translateX(-1500px);
-
- transition: all 1s 0s ease-in-out;
+transition: all 1s 0s ease-in-out;
 }
 
+/* Movie-grid section ---------------------------------------------------------------------------------------------------------------*/
 .movie-grid{
-
   display: grid;
-
   grid-gap: 10px;
-
   grid-template: repeat(5, 300px) / repeat(3, 1fr);
-
   margin:50px auto;
-
 }
 
-
+/* Pos relative to anchor movies divs*/
 .movie-location{
 
   position: relative;
 }
 
+/* Movie divs styles*/
 .movie-location:nth-child(1){
-
   grid-column: 1/3;
   grid-row: 1/3;
 
@@ -617,16 +596,13 @@ transform: translateX(-1500px);
   background-position: center top;
   background-repeat: no-repeat;
 
-   transform: translateX(-600px);
-
+ transform: translateX(-600px);
 }
 
-
 .movie-location:nth-child(2){
-
   grid-column: 3/4;
 
-    background-image: url("https://i.imgur.com/SG98mBL.jpg");
+  background-image: url("https://i.imgur.com/SG98mBL.jpg");
 
   background-size: cover;
   background-position: center center;
@@ -637,11 +613,10 @@ transform: translateX(-1500px);
 
 
 .movie-location:nth-child(3){
-
   grid-column: 2/4;
   grid-row: 3/4;
 
-    background-image: url("https://i.imgur.com/dPpZ3VT.jpg");
+  background-image: url("https://i.imgur.com/dPpZ3VT.jpg");
 
   background-size: cover;
   background-position: top center;
@@ -649,12 +624,10 @@ transform: translateX(-1500px);
 
  transform: translateX(-1000px);
 
-
 }
 
 .movie-location:nth-child(4){
-
-    background-image: url("https://i.imgur.com/TDj3ET4.jpg");
+  background-image: url("https://i.imgur.com/TDj3ET4.jpg");
 
   background-size: cover;
   background-position: top center;
@@ -664,11 +637,9 @@ transform: translateX(900px);
 }
 
 .movie-location:nth-child(5){
-
   grid-row: 4/6;
 
-
-   background-image: url("https://i.imgur.com/jZV5rVP.jpg");
+  background-image: url("https://i.imgur.com/jZV5rVP.jpg");
 
   background-size: 370px 100%;
   background-position: center center;
@@ -679,8 +650,7 @@ transform: translateX(900px);
 }
 
 .movie-location:nth-child(6){
-  
-background-image: url("https://i.imgur.com/4seJfTQ.jpg");
+  background-image: url("https://i.imgur.com/4seJfTQ.jpg");
 
   background-size: cover;
   background-position: top center;
@@ -690,21 +660,17 @@ background-image: url("https://i.imgur.com/4seJfTQ.jpg");
 }
 
 .movie-location:nth-child(7){
-  
-background-image: url("https://i.imgur.com/gKa2Kd0.jpg");
+  background-image: url("https://i.imgur.com/gKa2Kd0.jpg");
 
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
 
   transform: translateX(600px);
-
 }
 
-
 .movie-location:nth-child(8){
-  
-background-image: url("https://i.imgur.com/0WCQ4kh.jpg");
+  background-image: url("https://i.imgur.com/0WCQ4kh.jpg");
 
   background-size: cover;
   background-position: bottom center;
@@ -714,10 +680,8 @@ transform: translateX(800px);
 }
 
 .movie-location:nth-child(9){
-
   grid-column: 2/4;
   grid-row: 5/6;
-
 
   background-image: url(" https://i.imgur.com/DLvPSZy.jpg");
 
@@ -725,25 +689,24 @@ transform: translateX(800px);
   background-position: top center;
   background-repeat: no-repeat;
 
-   transform: translateY(600px);
-
+  transform: translateY(600px);
 }
 
+/* Window movie selection section---------------------------------------------------------------------------------------------------------------*/
+
+/* Position relative to ancher absolute child elements*/
 #window-movie-selection{
+    width:100%;
+    height: 800px;
+    margin: 100px 0;
+    position: relative;
+    overflow:hidden;
 
-
-width:100%;
-height: 800px;
-margin: 100px 0;
-position: relative;
-overflow:hidden;
-
-  background-image: url("https://i.imgur.com/e5F1VNY.jpg");
-  background-size:  cover;
-  background-position: bottom center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
- 
+    background-image: url("https://i.imgur.com/e5F1VNY.jpg");
+    background-size:  cover;
+    background-position: bottom center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 #leo{
@@ -754,12 +717,10 @@ overflow:hidden;
   position: absolute;
   top: 1200px;
 
-
   background-image: url("https://i.imgur.com/Gdfj8Le.png");
   background-size:  100% 100%;
   background-position: bottom center;
   background-repeat: no-repeat;
-
 
   z-index: 10;
 
@@ -776,7 +737,6 @@ overflow:hidden;
   margin-top: -100px;
   margin-left: -150px;
 
-
   z-index:20;
 }
 
@@ -788,6 +748,8 @@ overflow:hidden;
   transition: all 0.5s ease-in-out;
 }
 
+
+/* Family Section---------------------------------------------------------------------------------------------------------------*/
 #family-section{
 
   height: 450px;
@@ -806,21 +768,11 @@ background: -webkit-linear-gradient(45deg, #1AFF00 0%, #5BB200 55%, #248B00 100%
 background: linear-gradient(45deg, #1AFF00 0%, #5BB200 55%, #248B00 100%);
 }
 
+/* Change color of .mara-square */
 .mara-square2{
 
   background-color: #303030;
- 
- width: 130px;
- border-radius: 10px;
- text-align: center;
- 
- font-family: 'Bowlby One SC';
- font-size:  1.5em;
 
- position: absolute;
- bottom:0;
-
- transition:  all 1s 0s ease-in-out;
 }
 
 #mara-square1{
@@ -840,8 +792,6 @@ background: -moz-linear-gradient(45deg, #FF0000 0%, #C40404 55%, #860404 100%);
 background: -webkit-linear-gradient(45deg, #FF0000 0%, #C40404 55%, #860404 100%);
 background: linear-gradient(45deg, #FF0000 0%, #C40404 55%, #860404 100%);
 
-
-    
 }
 
 #mara-square3{
@@ -853,20 +803,22 @@ background: linear-gradient(45deg, #FF64EA 0%, #B447A5 55%, #86357B 100%);
 
 }
 
-#footer{
-  
-  background-color: black;
+.color{
 
-   color: white;
-
-    font-family: "Alegreya Sans SC";
-
-    padding: 50px 50px;
-    padding-bottom: 10px;
-
+   transition:  all 1s 0s ease-in-out;
 }
 
+/* Footer section ------------------------------------------------------------------------------------------------ */
+#footer{
+  background-color: black;
+  color: white;
 
+  font-family: "Alegreya Sans SC";
+  padding: 50px 50px;
+  padding-bottom: 10px;
+}
+  
+/* Center ULs */
 .center-footer{
 
   margin:0 auto;
@@ -874,16 +826,14 @@ background: linear-gradient(45deg, #FF64EA 0%, #B447A5 55%, #86357B 100%);
 }
 
 .center-footer ul > li{
-
   padding: 5px;
 }
 
 #icon-ul{
-  
   list-style: none;
-
 }
 
+/* Animate icons on hover  */
 #facebook, #instagram, #twitter{
 
   font-size: 30px;
@@ -919,13 +869,6 @@ i.fab{
 }
 
 
-
-.color{
-
-   transition:  all 1s 0s ease-in-out;
-}
-
-
 .movie-location-kids:nth-child(1){
 
   grid-column: 1/3;
@@ -940,8 +883,6 @@ i.fab{
  transform: translateX(-600px);
 
 }
-
-
 .movie-location-kids:nth-child(2){
 
   grid-column: 3/4;
@@ -955,7 +896,6 @@ i.fab{
 transform: translateX(600px);
 
 }
-
 
 .movie-location-kids:nth-child(3){
 
@@ -1051,12 +991,14 @@ background-image: url("https://i.imgur.com/QmZh6ZT.jpg");
 }
 
 
+/* Placeholder to help user scroll hit all offset().tops */
 #placeholder{
-
   height: 200px;
   width:100%;
   background-color: #ededef;
 }
+
+/* Form Section --------------------------------------------------------------------------------------------------------- */
 
 #reserve-title{
 
@@ -1064,10 +1006,8 @@ background-image: url("https://i.imgur.com/QmZh6ZT.jpg");
   color: white;
 }
 
-
 #form-reserve > p{
-     
-  
+
      margin: 0px auto;
      color:white;
      width:90%;
@@ -1077,13 +1017,6 @@ background-image: url("https://i.imgur.com/QmZh6ZT.jpg");
   
   font-size: 0.8em;
   margin: 38px auto;
-}
-
-input:focus,
-select:focus,
-textarea:focus,
-button:focus {
-    outline: none;
 }
 
 #form-table{
@@ -1137,19 +1070,17 @@ button:focus {
 
 /* Media Queries ----------------------------------------------------------------------------------------------------------------------------------------------------- */
 
-
-
 @media all and (min-width:874px) and (max-width:1464px){
 
-
+  /* Setting gallery-intro's height depending on view port */
  .gallery-intro{
-
     height: 1200px;
    }
 }
 
 @media all and (min-width:0px) and (max-width:1385px){
-
+    
+    /* Remove .circle1 and circle3 depending on view port */
   .circle1, .circle3{
     display:  none;
   }
@@ -1164,31 +1095,30 @@ button:focus {
   display:none;
 }
 
-
+/* Setting gallery-intro's height depending on view port */
 .gallery-intro{
 
     height: 2400px;
    }
 
+/* Had to override #navbar to keep it's original aspect ratio */
 #navbar{
 
   display: flex !important;
   flex-wrap:  wrap !important; 
-}
+  }
   
 }
 
-
-
-
 @media all and (min-width:0px) and (max-width:768px){
 
- body{
+  /*  Shrink main header */
+.main-header{
+  
+   height: 500px;
+}
 
-  font-size: 0.9em !important;
-
- }
-
+/* Remove #navbar and display block #mobile nav with hamburger button */
  #mobile-nav{
   display: block;
  }
@@ -1198,11 +1128,13 @@ button:focus {
   display:none !important;
 }
 
+/* Remove brooklyn-man and #leo */
 .brooklyn-man, #leo{
 
   display:none;
  }
 
+ /* Had to override to change size of svg-titles */
  #svg-logo{
 
   width:350px !important;
@@ -1214,20 +1146,15 @@ button:focus {
  }
 
 
-
-.main-header{
-  
-   height: 500px;
-}
-
-
 .logo{
 
   margin-top: 40px !important;
   margin: auto auto;
 }
 
-   .gallery-intro{
+/* Expand gallery-intro's height in order to fit view port */
+
+.gallery-intro{
 
     height: 2400px;
    }
@@ -1238,11 +1165,9 @@ button:focus {
   margin-bottom: 0px;
 }
 
+/* Changing .article 2 grid configuration to fit mobile view */
 .article2{
-
-
   margin:0 auto;
-
  grid-template-areas: 
                         "n"
                         "t"
@@ -1278,25 +1203,21 @@ margin-top: 0px;
 .movie-grid{
 
   display: grid;
-
   grid-gap: 10px;
-
   grid-template: repeat(9, 300px) / repeat(1, 1fr);
-
-justify-content: center;
+ justify-content: center;
 
 }
+
+/* Fix images from all galleries to fit mobile view port  */
 
 .movie-location:nth-child(1){
 
   grid-column: 1/2;
   grid-row: 1/2;
 
-
   background-size: cover;
   background-position: center center;
-
-
 }
 
 
@@ -1305,11 +1226,8 @@ justify-content: center;
   grid-column: 1/2;
   grid-row: 2/3;
 
-
   background-size: cover;
   background-position: center 45%;
-
-
 }
 
 
@@ -1318,17 +1236,14 @@ justify-content: center;
   grid-column: 1/2;
   grid-row: 3/4;
 
-
   background-size: cover;
   background-position: top center;
-
 }
 
 .movie-location:nth-child(4){
    
 grid-column: 1/2;
-  grid-row: 4/5;
-
+grid-row: 4/5;
 
   background-size: cover;
   background-position: center 17%;
@@ -1340,16 +1255,14 @@ grid-column: 1/2;
   grid-column: 1/2;
   grid-row: 5/6;
 
-
   background-size: cover;
   background-position: center center;
-
 
 }
 
 .movie-location:nth-child(6){
 
-   grid-column: 1/2;
+  grid-column: 1/2;
   grid-row: 6/7;
   
 
@@ -1360,13 +1273,12 @@ grid-column: 1/2;
 
 .movie-location:nth-child(7){
 
-   grid-column: 1/2;
+  grid-column: 1/2;
   grid-row: 7/8;
   
 
   background-size: cover;
   background-position: center 50% ;
-
 }
 
 
@@ -1401,112 +1313,90 @@ grid-column: 1/2;
   background-size: cover;
   background-position: center 1%;
 
-
 }
-
 
 .movie-location-kids:nth-child(2){
 
    grid-column: 1/2;
   grid-row: 2/3;
 
-
   background-size: cover;
   background-position: center 20%;
 
 }
 
-
 .movie-location-kids:nth-child(3){
 
-   grid-column: 1/2;
+  grid-column: 1/2;
   grid-row: 3/4;
-
 
   background-size: cover;
   background-position: top center;
-
 
 }
 
 .movie-location-kids:nth-child(4){
 
-    grid-column: 1/2;
+  grid-column: 1/2;
   grid-row: 4/5;
-
 
   background-size: cover;
   background-position: center 50%;
-
-
-
 
 }
 
 .movie-location-kids:nth-child(5){
 
-     grid-column: 1/2;
+   grid-column: 1/2;
   grid-row: 5/6;
 
 
   background-size: cover;
   background-position: center 45%;
- 
 
 }
 
 .movie-location-kids:nth-child(6){
 
-      grid-column: 1/2;
+  grid-column: 1/2;
   grid-row: 6/7;
-
 
   background-size: cover;
   background-position: center 70%;
-
 
 }
 
 .movie-location-kids:nth-child(7){
 
-      grid-column: 1/2;
+  grid-column: 1/2;
   grid-row: 7/8;
-  
 
   background-size: cover;
   background-position: top center;
-
 }
-
-
+  
 .movie-location-kids:nth-child(8){
 
-     grid-column: 1/2;
+  grid-column: 1/2;
   grid-row: 8/9;
   
-
   background-size: cover;
   background-position: bottom bottom;
 
-
 }
-
+  
 .movie-location-kids:nth-child(9){
 
   grid-column: 1/2;
   grid-row: 9/10;
 
-
   background-size: cover;
   background-position: top center;
-
-  }
-
+}
 
 
 #sub-section > .title-section{
 
    font-size: 2.6em;
+  }
 }
-
- }
