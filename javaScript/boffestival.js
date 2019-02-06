@@ -31,8 +31,11 @@ $('.navbar-items, .navbarM-items').on('click', function(){
 	$('#latest-news').show();
 	$('#sub-section').show();
 	$('#footer').show();
+   
+   $(this).addClass("clicked");
 
 	});
+
 
 	$(".fa-bars").on("click", function(e){
   
@@ -624,8 +627,6 @@ if(scrollTop > $('#latest-news').offset().top){
 
 
 });  
-
-
 
 
 // CALL BACK FUNCTIONS -------------------------------------------------------------------------
