@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!--Meta information -->
+	<title>Brooklyn Outdoor Film Festival</title>
+  <!--Meta information -->
   <meta charset="UTF-8">
   <meta name = "Welcome the Brooklyn Outdoor Film Festival. We organise film festivals in the city of Brooklyn to bring value and culture to our people">
    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
-<!-- Links, fonts and script libs -->
- <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css"> 
-  <link rel="stylesheet" type="text/css" href="css/boffestival.css">    
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	
+  <!-- Links, fonts and script libs -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css"> 
+	<link rel="stylesheet" type="text/css" href="css/boffestival.css">    
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Aleo|Thasadith|Bowlby+One+SC|Alegreya+Sans+SC:100" rel="stylesheet">
-
-
 </head>
 <body>
 
@@ -20,8 +20,10 @@
  
   <div class="container-fluid">
     <div class = "row">
-        <div class = "main-header col-sm-12 col-md-12 col-lg-12">
 
+      <!-- Header Section -->
+        <div class = "main-header col-sm-12 col-md-12 col-lg-12">
+                   <!-- Navbar -->
                   <div id = "navbar"> 
                         <div class="navbar-items"> <a href="#intro-text"> <strong> Who are we </strong></a> </div>
                         <div class="navbar-items"> <a href="#marathon-section"> <strong> Movie Marathons </strong> </a> </div> 
@@ -29,11 +31,9 @@
                         <div class="navbar-items"> <a href="#family-section"> <strong> Family Content </strong> </a> </div>
                         <div class="navbar-items"> <a href="#sub-section"> <strong> Reservation </strong> </a> </div>
                   </div>
-
+                   <!-- Mobile navbar which is hidden until you reach a certain screen size -->
                   <div id = "mobile-nav">
-                     
-                     <i class="fas fa-bars"></i>
-                     
+                     <i class="fas fa-bars"></i>  <!-- Hamburger Menu -->
                       <div id ="container-mobile"> 
                         
                           <p class="navbarM-items"> <a href="#intro-text"> <strong> Who are we  </strong></a> </li>
@@ -57,6 +57,7 @@
       </div>
      
      <div class= "row">
+          <!-- Section for the Articles -->
         <div id="intro-text" class="center col-xs-6 col-sm-10 col-md-8 col-lg-6">
 
              <div class="article">
@@ -70,6 +71,7 @@
     <div class ="row">
      
      <div class ="center col-xs-12 col-sm-10 col-md-10 col-lg-10">
+        <!-- Gallery-intro is where the pictures from the venew are stored -->
        <div class ="gallery-intro">
               <div id="picture1" class = "picture"> <figcaption id="figcaption1">  Beautiful views to Manhattan.</figcaption> </div>
               <div id="picture2" class = "picture"> <figcaption id="figcaption2">  Guest celebrity appearances.</figcaption> </div>
@@ -84,75 +86,63 @@
     </div>
 
 <div class = "row">
+  <!--Mararthon section is an article section, but with different styling. Article2 is a CSS grid with 3 different sections -  title-section, top-section and content-section  -->
   <div id="marathon-section" class ="article2 center">
-
     <div class="title-section"> 
           <h3> Movie Marathon Classics </h3> 
     </div>
-
+    <!-- Top section contains 3 mara-square objects that animate while scrolling down the page -->
     <div class="top-section">
        <div class="mara-square">3 </div>
        <div class="mara-square"> 1</div> 
        <div class="mara-square"> 2</div> 
     </div>
-
+      <!-- Where the text goes -->
     <div class="content-section">
-      
       <p> On the first day of the event <strong> (5th of August) </strong> be ready to travel back in time and watch epic movie marathons like James Bond and Lord of the Rings. Mus mauris vitae ultricies leo integer malesuada nunc. Urna nec tincidunt praesent semper feugiat nibh sed. Risus feugiat in ante metus.</p>
     </div>
-
    </div>
 </div>
 
 <div class="row">
-
+     <!-- Movie-window has 3 circles with a movie attached in it, that animate while scrolldown -->
     <div class="movie-window"> 
-  
+      <!-- Circle/Movie 1 -->
       <div class="circle circle1">
-
          <video id="circle-movie1" class="circle-movie" autoplay muted>
           <source src="videos/bond.mp4#t=8,15" type="video/mp4">
-        </video>
-    
+          </video>
        </div> 
-
+     <!-- Circle/Movie 2 -->
       <div class="circle circle2">
-
-      <video class="circle-movie" autoplay muted>
+         <video class="circle-movie" autoplay muted>
           <source src="videos/bond.mp4#t=8,14.85" type="video/mp4">
         </video>
-
-         </div>
-
+      </div>
+      <!-- Circle/Movie 3 -->
       <div class="circle circle3">
-
         <video class="circle-movie" autoplay muted>
           <source src="videos/bond.mp4#t=8,14.3" type="video/mp4">
         </video>
-
        </div>
     </div>
 </div>
+
+   
   <div class="row">
-
      <div id="movie-selection" class="movie-grid-text col-xs-12 col-sm-10 col-md-8 col-lg-6 center">
-
-     <div class="article">
-       <h1> A wide selection of movies from every genre</h1>
+        <div class="article">
+            <h1> A wide selection of movies from every genre</h1>
        <hr>
        <p> On the <strong> 6th and 7th </strong>, will be showcasing the most revered pop-culture, fiction and romance movies from American History.  Quam quisque id diam vel quam elementum pulvinar etiam non. Arcu cursus euismod quis viverra nibh cras pulvinar mattis nunc.</p>
     </div>
-
-    </div>       
-    
+  </div>       
 </div>
 
+<!-- This is section is where all movies for adults are stored. They animate and interact with user scrol -->
 <div class="row">
   <div class="center col-xs-12 col-sm-12 col-md-10 col-lg-8">
-
         <div id="movie-grid-adults" class ="movie-grid center">
-
-
               <div id="movie1" class="movie-location"></div>
               <div id="movie2"class="movie-location"></div>
               <div id="movie3" class="movie-location"></div>
@@ -162,58 +152,44 @@
               <div id="movie7" class="movie-location"></div>
               <div id="movie8" class="movie-location"></div>
               <div id="movie9" class="movie-location"></div>
-
          </div>
-
     </div>
   </div>
+
+<!-- Section where movie 'Inception' premiere is stored -->
 <div class = "row">
     <div id= "window-movie-selection">
-        
         <div id="logo-inception" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-
                 <svg viewBox="0 0 619.9 278.1">
                     <use xlink:href="#logo-svg1"></use>
                 </svg>
-
-        </div>
-
+            </div>
         <div id="leo"> </div>
-
     </div>
 </div>
 
 <div class ="row">
     <div id = "family-section" class ="article2 center">
-
-
     <div class="content-section" id="color-family-content">
       
       <p> On the <strong> 8th of August </strong> all movies will be deticated to our little favourite companions :). Mus mauris vitae ultricies leo integer malesuada nunc. Urna nec tincidunt praesent semper feugiat nibh sed. Risus feugiat in ante metus. </p>
     </div>
 
-   
     <div class="top-section">
-
        <div id="mara-square1" class="mara-square2"><i class="fas fa-gift"></i> </div>
        <div id="mara-square2" class="mara-square2"> <i class="fas fa-dragon"></i></div> 
        <div id="mara-square3" class="mara-square2"> <i class="fas fa-child"></i></div> 
-
     </div>
 
      <div class="title-section"> 
-      
+        <!-- The spans with class color are used to change the color of the title-section every time the user scrolls down the page-->
       <h3> Family <span class = 'color'> F</span><span class = 'color'>r</span><span class = 'color'>i</span><span class = 'color'>e</span><span class = 'color'>n</span><span class = 'color'>d</span><span class = 'color'>l</span><span class = 'color'>y</span> Content </h3> 
-
     </div>
   </div>
 </div>
 
 <div class="row">
-
     <div id="movie-grid-children" class ="movie-grid center col-xs-12 col-sm-12 col-md-10 col-lg-8">
-
-
               <div id="movie1-kids" class="movie-location-kids"></div>
               <div id="movie2-kids"class="movie-location-kids"></div>
               <div id="movie3-kids" class="movie-location-kids"></div>
@@ -223,32 +199,25 @@
               <div id="movie7-kids" class="movie-location-kids"></div>
               <div id="movie8-kids" class="movie-location-kids"></div>
               <div id="movie9-kids" class="movie-location-kids"></div>
-
-
     </div>
 </div>
-
+   
+   <!-- News Section -->
   <div class="row">
-
      <div id="latest-news" class="movie-grid-text col-xs-12 col-sm-10 col-md-8 col-lg-6 center">
-
      <div class="article">
        <h1> Latest News</h1>
        <hr>
        <p> Id interdum velit laoreet id donec ultrices tincidunt. Sit amet mattis vulputate enim. A scelerisque purus semper eget duis at tellus at. Sit amet mauris commodo quis imperdiet massa. Arcu bibendum at varius vel pharetra vel. At auctor urna nunc id cursus metus aliquam eleifend mi. </p>
     </div>
-
-    </div>       
-    
+  </div>        
 </div>
 
 <div class = "row">
   <div id="sub-section" class ="article2 center">
-
     <div class="title-section"> 
           <h3> Book now! <span id = "subtract-ticket-1"> 5000  </span> spots left </h3> 
     </div>
-
     <div class="top-section">
        <div class="mara-square3"> <span id="ticket-cap"> 0 </span> </div>
        <div class="mara-square3"> GO! </div> 
@@ -257,72 +226,58 @@
 
     <div class="content-section">
       <h3 id="reserve-title"> 5 tickets max per person </h3>
-      
-<div id="form-table">
+   
+   <!-- Form Section - Form-table is divided in to two sections via CSS Grid. One section holds the form and input fields and the other section holds the help variables to fill in the input  -->
+   <div id="form-table">
 
    <div id="form-side">
-       <form id = "form-reserve"> 
+       <form id ="form-reserve"> 
        <p>
       <label for="username">Username</label> 
       <input type="text" name="username" id="username" required>
-     
     </p>
     <p>
       <label for="password">Password</label> 
       <input type="password" name="password" id="password" required>
-      
     </p>
     <p>
       <label for="emailAddress">Email address</label> 
       <input type="email" name="emailAddress" id="emailAddress" required placeholder="user@gmail.com">
-     
     </p>
     <p>  <label for="ticket-number">Number Tickets </label> 
         <input type ="number" id="ticket-number" value=0>
     </p>
-
      <p>
       <input id="submit" type="submit" value="Book" disabled="true">
      </p>
-
-    </form>
+  </form>
 
   </div>
    <div id="span-side">
-
         <p> 3 to 12 Char: <span id="userNameHelp"></span> </p>
         <p> 6 to 12 Char:  <span id="passwordHelp"> </span> </p>
         <p> Email: <span id="emailHelp"></span> </p>
         <p> 1 to 5 tickets: <span id="ticketsHelp"></span> </p> 
 
    </div>
-
-
 </div>
-
- 
     </div>
-
    </div>
 </div>
 
-
+<!-- This div works an extra space to help reach div's offset.top better -->
 <div id="placeholder"> </div>
 
+<!-- Footer Section -->
    <div id= 'footer'>
-  
-
       <div class="row">
-
         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"> 
           <div class="center-footer">
            <p> <strong> FIND US ON: </strong> </p>
             <ul id="icon-ul">   
-
                 <li><a id="facebook" href="#"> <i class="fab fa-facebook-square"></i> </a>  </li> 
                 <li><a id="twitter" href="#"><i class="fab fa-twitter-square"></i> </a>   </li>
                 <li><a id="instagram" href="#"> <i class="fab fa-instagram"></i> </a></li>
-           
             </ul>
           </div>
         </div>
@@ -330,13 +285,10 @@
 
          <div class=" center-footer">
        <p> <strong> OUR PARTENERS: </strong> </p>
-            <ul>   
-
+            <ul>  
                 <li><a href="https://www.brooklyn-usa.org/">Brooklyn Borough Hall </a> </li> 
                 <li><a href="https://www.brooklynbridgepark.org/">Brooklyn Bridge Park </a>  </li>
                 <li><a href="http://www.brooklyn.cuny.edu/web/home.php">Brooklyn College </a></li>
-                
-
             </ul> 
           </div>
         </div>
@@ -364,11 +316,8 @@
                      <p> <img id="license" src = "https://i.imgur.com/OO02uAi.png"> </p>   
           </div>
       </div>
-         
      </div>
-
    </div>
-
 </div>
  
  <!-- SVG FILES ------------------------------------------------------------------------------------------------------------------------------------------------------------ -->
@@ -1107,12 +1056,12 @@
 
  <!-- SVG FILES ----------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
-
- <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+ <!-- Scripts -->
+   <script src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
 
-<script type="text/javascript" src="javaScript/boffestival.js"></script>
-
-</body>
+  <script type="text/javascript" src="javaScript/boffestival.js"></script>
+  
+  </body>
 </html>
