@@ -313,21 +313,23 @@ var maratonList = document.querySelectorAll(".mara-square");
 			}
 		}
 
+
+    // Get circles that animate on the middle of the page
 	var circleList = document.querySelectorAll(".circle");
     var iterateCircle = 0;
     var addTranslateX = 0;
  
 
 if( $('#marathon-section').offset().top !=0 ){
-
+     
 	if(scrollTop > $('#marathon-section').offset().top +  $('#marathon-section').height() - 200 ){ 
 	         
-
 
 			circleList.forEach(function(circle){
             
 		    setTimeout(function(){
 				
+				// Translate on X axis and give opacity 1
 		    	circle.style.transform = 'translateX(0px)';
 		    	circle.style.opacity = "1";
 		    
@@ -341,9 +343,9 @@ if( $('#marathon-section').offset().top !=0 ){
 
 }
 
+//fade in movie section
+
 if( $('.movie-window').offset().top !=0 ){
-
-
 
 	 	if(scrollTop >  $('.movie-window').offset().top){ 
 
@@ -352,50 +354,41 @@ if( $('.movie-window').offset().top !=0 ){
 	  }  
 	}
 
+
+// This section makes slidding effects interactive as users scroll down the page
 if( $('#movie-selection').offset().top !=0 ){
 
 	 	if(scrollTop > ($('#movie-selection').offset().top + ( $('#movie-selection').height())-900) ){ 
 
-	 			
-
+	 		//The purpose of this code is to get a range of negative values to 0. With this the items will scroll from the left and land roughly at the middle of the page
 	 		var offset = Math.min(0, (scrollTop - $('.movie-window').offset().top-900));
 
-	 		$('#movie-grid-adults').fadeIn(2000);
+	 	//fade in movie-grid-adults
+	 	$('#movie-grid-adults').fadeIn(2000);
 
-	 		
-		
+	 	// Translate objects from movie-grid-adults
 		$('#movie1').css({
 
 			transform: 'translateX('+ offset +'px)',
 			transition: 'all 1.2s ease-in-out'
-
-
 		});
-
-	
 
 		$('#movie2').css({
 
 			transform: 'translateX('+ Math.abs(offset) +'px)',
 			transition: 'all 1s ease-in-out'
-
 		});
-
-	
 
 		$('#movie4').css({
 
 			transform: 'translateX('+ Math.abs(offset) +'px)',
 			transition: 'all 0.8s ease-in-out'
-
 		});
 
 		$('#movie3').css({
 
 			transform: 'translateX('+ Math.abs(offset) +'px)',
 			transition: 'all 1s ease-in-out'
-
-
 		});
 
 
@@ -437,21 +430,21 @@ if( $('#movie-selection').offset().top !=0 ){
 	   });
       
 	 } 
-
 }
  
 
-  if($('#movie7').offset().top != 0){
+	//fade #window-movie-selection
+	if($('#movie7').offset().top != 0){
 
-if(scrollTop > $('#movie7').offset().top){ 
+	if(scrollTop > $('#movie7').offset().top){ 
 
+	  		$('#window-movie-selection').fadeIn(1000);
+	    }
+	  }
 
-  		$('#window-movie-selection').fadeIn(1000);
-    }
-  }
-
-	 var letterIncList = document.querySelectorAll(".path4");
-	 var iterationLetterInc = 0;
+//Get fadding letters, similiar to main header section
+var letterIncList = document.querySelectorAll(".path4");
+var iterationLetterInc = 0;
 
 	if ($('#movie9').offset().top != 0){	
 
@@ -464,11 +457,12 @@ if(scrollTop > $('#movie7').offset().top){
 		transform: 'translateY(-' +scrollTop/45.5+ '%)'
 	});
 
+  //fadding letters with call back function
   titleLettersShow(letterIncList);
-
   }
-
 }
+
+//Get squares that go up on #family-section
 
 var famList = document.querySelectorAll(".mara-square2");
 var colorList = document.querySelectorAll(".color");
@@ -479,20 +473,21 @@ if ($('#window-movie-selection').offset().top != 0){
 
 	if(scrollTop > $('#window-movie-selection').offset().top + 100 ){
 
-
 		$('#family-section').fadeIn(2000);
 
 		elevateSquares(famList);
-
+        
+         // This function changes colors for each letter for the title'Friendly' on user scroll
 		colorList.forEach(function(letter){
-
+      
+            //Generate random colors with Math.random() and multiply it by 255.
 			var randomNumber1 = parseInt(Math.random()*255);
 			var randomNumber2 = parseInt(Math.random()*255);
 			var randomNumber3 = parseInt(Math.random()*255);
-			
 
 			setTimeout(function(){
-
+ 			
+ 			// Generate an rgb code and change font color for each letter
 			letter.style.color = "rgb("+(randomNumber1)+", "+(randomNumber2)+ ", "+(randomNumber3)+ ")";
 
 			}, 200*(iterationColor+1) );
@@ -501,18 +496,14 @@ if ($('#window-movie-selection').offset().top != 0){
 
 		});
 
-
 	} 
  }
-
-
 
 if($('#family-section').offset().top!= 0){
 
  	if(scrollTop > $('#family-section').offset().top - 100 ){ 
 
 	 		var offsetKids = Math.min(0, (scrollTop - $('#movie-grid-children').offset().top+100));
-
 
 	 		$('#movie-grid-children').fadeIn(2000);
 		
@@ -521,10 +512,7 @@ if($('#family-section').offset().top!= 0){
 			transform: 'translateX('+ offsetKids +'px)',
 			transition: 'all 1.2s ease-in-out'
 
-
 		});
-
-	
 
 		$('#movie2-kids').css({
 
@@ -532,8 +520,6 @@ if($('#family-section').offset().top!= 0){
 			transition: 'all 1s ease-in-out'
 
 		});
-
-	
 
 		$('#movie4-kids').css({
 
@@ -546,10 +532,7 @@ if($('#family-section').offset().top!= 0){
 
 			transform: 'translateX('+ Math.abs(offsetKids) +'px)',
 			transition: 'all 1s ease-in-out'
-
-
 		});
-
 
 		$('#movie6-kids').css({
 
@@ -558,14 +541,12 @@ if($('#family-section').offset().top!= 0){
 
 		});
 
-
 		$('#movie5-kids').css({
 
 			transform: 'translateX('+ (offsetKids) +'px)',
 			transition: 'all 1s ease-in-out'
 
 		});
-
 
 		$('#movie7-kids').css({
 
@@ -594,7 +575,6 @@ if($('#family-section').offset().top!= 0){
 
  var subList = document.querySelectorAll('.mara-square3');
 
-
   if($('#movie7-kids').offset().top != 0){
 
 if(scrollTop > $('#movie7-kids').offset().top ){ 
@@ -621,11 +601,8 @@ if(scrollTop > $('#latest-news').offset().top){
    
     $('#footer').fadeIn(2000);
 
- }
-
-}
-
-
+    }
+  }
 });  
 
 
@@ -634,7 +611,7 @@ if(scrollTop > $('#latest-news').offset().top){
 function titleLettersShow(letterList){
  var iterationLetter = 0;
  
-
+// function load letters on top of title sections
 setTimeout(function(){
 
     letterList.forEach(function(letter){
@@ -651,6 +628,7 @@ setTimeout(function(){
 
 }
 
+// function to elevateSquares on .article2 sections
 function elevateSquares(squareList){
 
 squareList.forEach(function(square){
@@ -658,5 +636,4 @@ squareList.forEach(function(square){
 		   square.style.transform = 'translateY(10px)';
 			
 		});
-
 }
