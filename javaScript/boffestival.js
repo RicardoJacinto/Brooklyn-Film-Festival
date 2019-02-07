@@ -35,17 +35,14 @@ $('.navbar-items, .navbarM-items').on('click', function(){
    // Because there can only be one active link, removing all clicked classes from the nav items will do the trick to give the impression there's only one active state
    $('.navbar-items, .navbarM-items').removeClass('clicked');
    // Add class clicked to the clicked nav item;
-   $(this).addClass('clicked');
-         
-
+   $(this).addClass('clicked');         
   });
-
 
 	$(".fa-bars").on("click", function(e){
   
      $("#container-mobile").slideToggle();
 
-     });
+   });
 
 // Get input fields
 var username = document.querySelector('#username');
@@ -66,12 +63,16 @@ var userNameHelp = document.querySelector('#userNameHelp');
 // Set correct colors variables depending on user input
 var correctColor = "#a0ff77";
 var incorrectColor = "red";
-    	
+
 
 //check if #ticket-number is on the correct range
 ticketNumber.addEventListener("blur" , function(e){
-   
-  	if( (e.target.value > 5) || (e.target.value <= 0)){
+    
+   var countTickets = Number(e.target.value);
+   var ticketsPerPerson = 5;
+
+    //countTickets > Number(subtractTicket.textContent)) makes sure the countTickets is never bigger than the available tickets
+  	if((countTickets > ticketsPerPerson || countTickets > Number(subtractTicket.textContent))  || (countTickets <= 0) ){
    
        submit.setAttribute("disabled", "true");
        ticketsHelp.textContent = "Invalid"
@@ -80,16 +81,18 @@ ticketNumber.addEventListener("blur" , function(e){
    	  }else{
 
    	     ticketsHelp.textContent = "Valid"
-   	     ticketCap.textContent = Number(e.target.value);
+   	     ticketCap.textContent = Number(countTickets);
          ticketsHelp.style.color = correctColor;
 
+         //Makes sure all user inputs are Valid before disabling button
    	     if( userNameHelp.textContent === "Valid" && passwordHelp.textContent ==="Valid" && emailHelp.textContent ==="Valid" &&  ticketsHelp.textContent === "Valid" ){
      				
      				 submit.removeAttribute("disabled");
 
-                  }
-   			   }
-         });
+                }
+   	        }
+
+     }); 
 
   // check if username input has the correct length
   username.addEventListener('input', function(e){
@@ -98,6 +101,7 @@ ticketNumber.addEventListener("blur" , function(e){
           
          userNameHelp.textContent = "Valid";
 
+             //Makes sure all user inputs are Valid before disabling button
          if( userNameHelp.textContent === "Valid" && passwordHelp.textContent ==="Valid" && emailHelp.textContent ==="Valid" && ticketsHelp.textContent === "Valid"){
 
          	  submit.removeAttribute("disabled"); 
@@ -112,6 +116,7 @@ ticketNumber.addEventListener("blur" , function(e){
   		submit.setAttribute("disabled", "true");
   	 
   	  }
+  	
   });
 
 
@@ -161,32 +166,71 @@ email.addEventListener("blur", function (e) {
 
 // set preventDefault to avoid default behaviour from submit and reset all the variables
 submit.addEventListener('click', function(e){
- 
+
  e.preventDefault();
+
+// Subtracts the ticket number from the ticket displays
+subtractTicket.textContent = Number(subtractTicket.textContent) -  Number(ticketNumber.value);
+subtractTicket1.textContent = Number(subtractTicket1.textContent) - Number(ticketNumber.value);
+
+// Removes the letter S from spots when subtractTicket1 is equal to 1
+if( Number(subtractTicket1.textContent) === 1){
+		document.querySelector("#letterS").textContent = "";
+	} 	
+
+
+if( Number(subtractTicket.textContent) === 0 ){
+
+         // Adds letter s again
+        document.querySelector("#letterS").textContent = "s";
+        //Cals callback function when there's no more tickets
+ 		endTickets();
+ 		// Sets title of the form when no more tickets are available
+ 		document.querySelector("#reserve-title").textContent = "No more tickets available."
+ 		subtractTicket1.textContent=0;
+ 		subtractTicket.style.color="red";
+	    subtractTicket1.style.color="red";
+
+}
+else{
+     // call callback function to submitForm
+	 submitForm();	
+}
+
+});
+
+//disables all inputs when there's no more tickets available
+function endTickets(){
+    
+   pass.setAttribute('disabled','true');
+   username.setAttribute('disabled','true');
+   email.setAttribute('disabled','true');
+   ticketNumber.setAttribute('disabled','true');
+   subtractTicket.style.color="red";
+   subtractTicket.textContent=0;
+   subtractTicket1.textContent=0;
+   subtractTicket1.style.color="red";
+   submitForm();
+}
+
+//Resets all values if submit requirements are met
+function submitForm(){
+ 
  pass.value = "";
  username.value="";
  email.value="";
 
- ticketCap.textContent = "0";
+ ticketCap.textContent = 0;
  emailHelp.textContent="";
  passwordHelp.textContent="";
  userNameHelp.textContent="";
  ticketsHelp.textContent="";
 
-
-//Get value from spans through textContent, convert it to a number and then subtract it with ticketNumber.value from input
-var getValSpan = Number(subtractTicket.textContent);
-var getValSpan1 = Number(subtractTicket1.textContent);
-
-
-subtractTicket.textContent = getValSpan -  Number(ticketNumber.value);
-subtractTicket1.textContent = getValSpan1 - Number(ticketNumber.value);
-
+ 
 // reset ticket Number Value
 ticketNumber.value = 0;
 
-})
-
+}
 
 var navbarList = document.querySelectorAll(".navbar-items");
 var iterateItems = 0;
@@ -239,7 +283,6 @@ $('.picture').on("mouseleave", function(e){
 		})
 });
 
-//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 //listen to the scroll of the window---------------------------------------------------------------------------------------------------------------------------------------------------
 $(window).scroll(function(e){
