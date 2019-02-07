@@ -69,7 +69,7 @@ var incorrectColor = "red";
 ticketNumber.addEventListener("blur" , function(e){
     
    var countTickets = Number(e.target.value);
-   var ticketsPerPerson = 5000;
+   var ticketsPerPerson = 5;
 
     //countTickets > Number(subtractTicket.textContent)) makes sure the countTickets is never bigger than the available tickets
   	if((countTickets > ticketsPerPerson || countTickets > Number(subtractTicket.textContent))  || (countTickets <= 0) ){
