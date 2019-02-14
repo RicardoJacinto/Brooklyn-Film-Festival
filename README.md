@@ -75,6 +75,18 @@ Pre-registration form:
 <li>Number of tickets selected can’t be bigger than the available ones (when you have less than 5 tickets available);</li>
 <li> Added user constraints to all input fields;</li>
 </ul>
+Animations:
+<ul>
+<li>Integrated jQuery and javascript;</li>
+<li> Creation of parallax effect; </li>
+<li>Used scrollTop function to determine height of the window and trigger animations when user reaches a certain point on the page;</li>
+
+</ul>
+Extra tools:
+<ul>
+<li>Creation and implementation of svg files made on Illustrator; </li>
+<li> Edited images on Photoshop, in order to make them work on a parallax scroll down environment;</li>
+</ul>
 	
 <h1> Check my website @ <a href="https://ricardojacinto.github.io/brooklynFilmFestivalFinal/"> Brooklyn Film Festival </a>  </h1>
 
