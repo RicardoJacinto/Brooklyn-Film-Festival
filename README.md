@@ -15,7 +15,7 @@ Our client, Jennifer Viala, Co founder of Brooklyn Vibes events CO decided to or
 The venue holds up to 5000 people and will take place from August 5th to 8th at Brooklyn Bridge Park. 
 
 
-<strong>2 - Stakeholders: </stong>
+<strong>2 - Stakeholders: </strong>
 <ul> 
 	<li> Project Manager: Bismark Frimpong </li>
 	<li> Lead Developer: Ricardo Jacinto </li>
