@@ -11,8 +11,8 @@
 <h1> Project Brief </h1>
 
 <strong> 1 – Summary </strong>
-Our client, Jennifer Viala, Co founder of Brooklyn Vibes events CO decided to organize the Brooklyn’s Outdoor Film Festival for this year and she wants us to create a website in order -to promote it.
-The venue holds up to 5000 people and will take place from August 5th to 8th at Brooklyn Bridge Park. 
+<p>Our client, Jennifer Viala, Co founder of Brooklyn Vibes events CO decided to organize the Brooklyn’s Outdoor Film Festival for this year and she wants us to create a website in order -to promote it.
+The venue holds up to 5000 people and will take place from August 5th to 8th at Brooklyn Bridge Park. </p>
 
 
 <strong>2 - Stakeholders: </strong>
@@ -25,7 +25,7 @@ The venue holds up to 5000 people and will take place from August 5th to 8th at 
 </ul>
 
 <strong> 3 - Goals: </strong>
-The client wishes to implement the following goals throughout the project:
+<p> The client wishes to implement the following goals throughout the project: </p>
 <ul>
    <li>Film selection needs to appeal to all audiences;</li>
    <li>Display information about the festival, showcased films and regularly published news or announcements;</li>
@@ -42,7 +42,7 @@ The client wishes to implement the following goals throughout the project:
 </ul>
 
 <strong> 4 - Budget:  </strong>
-The client has a budget of $3500 to get the website up and running:
+<p> The client has a budget of $3500 to get the website up and running: </p>
 <ul>
 	<li>Development	fases </li>
 	<li>Research: $200 </li>	
@@ -56,19 +56,19 @@ The client has a budget of $3500 to get the website up and running:
 Total Development Cost	$3500	
 
 <strong> 5 - Technical Specifications: </strong>
-To improve user experience:
+<p> To improve user experience: </p>
 <ul>
 <li>Added hover effects on links;</li>
 <li>Added a sticky navbar;</li>
 <li>Implemented an active class (change colors) on navbar items when they are clicked;</li>
 <li>Hamburger menu on mobile view;</li>
 </ul>
-Responsive design:
+<p> Responsive design: </p>
 <ul>
 <li>Bootstrap grid;</li>
 <li>Code to make design responsive and scalable on mobile views;</li>
 </ul>
-Pre-registration form:
+<p> Pre-registration form: </p>
 <ul>
 <li>Added regex constraints for email;</li>
 <li>All input fields need to be filled in order to activate button;</li>
@@ -77,14 +77,14 @@ Pre-registration form:
 <li>Number of tickets selected can’t be bigger than the available ones (when you have less than 5 tickets available);</li>
 <li> Added user constraints to all input fields;</li>
 </ul>
-Animations:
+<p> Animations: </p>
 <ul>
 <li>Integrated jQuery and javascript;</li>
 <li> Creation of parallax effect; </li>
 <li>Used scrollTop function to determine height of the window and trigger animations when user reaches a certain point on the page;</li>
 
 </ul>
-Extra tools:
+<p> Extra tools: </p>
 <ul>
 <li>Creation and implementation of svg files made on Illustrator; </li>
 <li> Edited images on Photoshop, in order to make them work on a parallax scroll down environment;</li>
