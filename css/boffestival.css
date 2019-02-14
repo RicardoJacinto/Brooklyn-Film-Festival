@@ -186,7 +186,7 @@ button:focus {
 
 /* .path(n) referes to the classes addresing the #svg-logo. This will style the different layers of the svg with a white fill  */
 .path, .path1, .path2{
-    fill: black;
+    fill: white;
 }
 
   #logo-svg1  path{
