@@ -40,6 +40,7 @@ The client wishes to implement the following goals throughout the project:
    <li>Implement pre-registration section in order to determine how many people will come to the festival and if it reaches the reservation cap (5000 tickets available), close registration.</li>
    <li>Acquire a domain relevant to the site’s theme;</li>
 </ul>
+
 <strong> 4 - Budget:  </strong>
 The client has a budget of $3500 to get the website up and running:
 <ul>
@@ -50,7 +51,8 @@ The client has a budget of $3500 to get the website up and running:
 	<li>Graphic Design: $500 </li>	
 	<li>Coding: $1750 </li>	
 	<li>Domain Name Purchase: $100 </li>	
-</ul>		
+</ul>
+
 Total Development Cost	$3500	
 
 <strong> 5 - Technical Specifications: </strong>
