@@ -2,42 +2,79 @@
 
 <img src = "https://i.imgur.com/t7O15lU.png">
 
-Project 3: Build a Brooklyn outdoor film festival for our client. This is part of my course work for <strong> Open Classrooms </strong> 
+<h1> Summary </h1>
 
-1 – Summary
+<p>Project 3: Build a Brooklyn outdoor film festival for our client. This is part of my course work for <strong> Open Classrooms </strong> </p>
+
+<h1> Check my website @ <a href="https://ricardojacinto.github.io/brooklynFilmFestivalFinal/"> Brooklyn Film Festival </a>  </h1>
+
+<h1> Project Brief </h1>
+
+<strong> 1 – Summary </strong>
 Our client, Jennifer Viala, Co founder of Brooklyn Vibes events CO decided to organize the Brooklyn’s Outdoor Film Festival for this year and she wants us to create a website in order -to promote it.
 The venue holds up to 5000 people and will take place from August 5th to 8th at Brooklyn Bridge Park. 
 
 
-2 - Stakeholders: 
-Project Manager:	Bismark Frimpong
-Lead Developer:	Ricardo Jacinto
-Lead Designer:	Travis Lawrence
-Mobile Developer:	Bapu Patil
-CFO:	Mark Cuban
+<strong>2 - Stakeholders: </stong>
+<ul> 
+	<li> Project Manager: Bismark Frimpong </li>
+	<li> Lead Developer: Ricardo Jacinto </li>
+	<li> Lead Designer: Travis Lawrence </li>
+	<li> Mobile Developer: Bapu Patil </li>
+	<li> CFO: Mark Cuban </li>
+</ul>
 
-3 - Goals: 
+<strong> 3 - Goals: </strong>
 The client wishes to implement the following goals throughout the project:
-•	Film selection needs to appeal to all audiences;
-•	Display information about the festival, showcased films and regularly published news or announcements;
-•	Display that shows are free;
-•	Site must be accomplished with html, CSS and Bootsrap;
-•	Add links to the following webpages, somewhere on the page(navigation bar, footer links, etc): 	
-o	City of Brooklyn news website;
-o	Brooklyn Bridge Park’s website;
-•	Links to twitter, Instagram and twitter must be icons;
-•	Implement pre-registration section in order to determine how many people will come to the festival and if it reaches the reservation cap (5000 tickets available), close registration.
-•	Acquire a domain relevant to the site’s theme;
-
-4 - Budget: 
+<ul>
+   <li>Film selection needs to appeal to all audiences;</li>
+   <li>Display information about the festival, showcased films and regularly published news or announcements;</li>
+   <li>Display that shows are free;</li>
+   <li>Site must be accomplished with html, CSS and Bootsrap;</li>
+   <li>Add links to the following webpages, somewhere on the page(navigation bar, footer links, etc):</li> 	
+   <ul>
+	   <li>City of Brooklyn news website; </li>
+	   <li>Brooklyn Bridge Park’s website; </li>
+   </ul>
+   <li>Links to twitter, Instagram and twitter must be icons;</li>
+   <li>Implement pre-registration section in order to determine how many people will come to the festival and if it reaches the reservation cap (5000 tickets available), close registration.</li>
+   <li>Acquire a domain relevant to the site’s theme;</li>
+</ul>
+<strong> 4 - Budget:  </strong>
 The client has a budget of $3500 to get the website up and running:
-Development	Amount	Comments
-Research	$200	
-Consulting fees	$200	
-Web Design	$750	
-Graphic Design	$500	
-Coding	$1750	
-Domain Name Purchase	$100	
-		
+<ul>
+	<li>Development	fases </li>
+	<li>Research: $200 </li>	
+	<li>Consulting: fees $200 </li>	
+	<li>Web Design: $750 </li>	
+	<li>Graphic Design: $500 </li>	
+	<li>Coding: $1750 </li>	
+	<li>Domain Name Purchase: $100 </li>	
+</ul>		
 Total Development Cost	$3500	
+
+<strong> 5 - Technical Specifications: </strong>
+To improve user experience:
+<ul>
+<li>Added hover effects on links;</li>
+<li>Added a sticky navbar;</li>
+<li>Implemented an active class (change colors) on navbar items when they are clicked;</li>
+<li>Hamburger menu on mobile view;</li>
+</ul>
+Responsive design:
+<ul>
+<li>Bootstrap grid;</li>
+<li>Code to make design responsive and scalable on mobile views;</li>
+</ul>
+Pre-registration form:
+<ul>
+<li>Added regex constraints for email;</li>
+<li>All input fields need to be filled in order to activate button;</li>
+<li>You can only take 5 tickets per person;</li>
+<li>Range of values which permits it’s users to only take 5000 tickets;</li>
+<li>Number of tickets selected can’t be bigger than the available ones (when you have less than 5 tickets available);</li>
+<li> Added user constraints to all input fields;</li>
+</ul>
+	
+<h1> Check my website @ <a href="https://ricardojacinto.github.io/brooklynFilmFestivalFinal/"> Brooklyn Film Festival </a>  </h1>
 
