@@ -2,7 +2,7 @@
 
 <img src = "https://i.imgur.com/t7O15lU.png">
 
-Project 3: Build a Brooklyn outdoor film festival for our client 
+Project 3: Build a Brooklyn outdoor film festival for our client. This is part of my course work for <strong> Open Classrooms </strong> 
 
 1 – Summary
 Our client, Jennifer Viala, Co founder of Brooklyn Vibes events CO decided to organize the Brooklyn’s Outdoor Film Festival for this year and she wants us to create a website in order -to promote it.
