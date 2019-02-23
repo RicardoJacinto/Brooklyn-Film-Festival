@@ -1,6 +1,6 @@
 # Brooklyn-Film-Festival
 
-<video controls>
+<video width="320" height="240"  controls>
   <source src="movies/my-first-pro-website.mp4" type="video/mp4">
 </video>
 
