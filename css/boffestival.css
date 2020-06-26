@@ -253,6 +253,8 @@ button:focus {
 
 .article p{
   margin: 50px auto;
+  line-height: 40px;
+  text-align: center;
 }
 /* Gallery intro-section ------------------------------------------------------------------------------------------------------- */
 
