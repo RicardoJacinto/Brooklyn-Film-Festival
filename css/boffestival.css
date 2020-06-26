@@ -124,7 +124,7 @@ button:focus {
   background-color:rgba(0,0,0,1) !important;
   z-index:100;
 
-  transition: all 0.3s  ease-in-out;
+  transition: margin 0.3s  ease-in-out;
 }
 
 /* #mobile-nav has display none until it reaches a certain view port size */
